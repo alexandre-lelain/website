@@ -23,5 +23,10 @@
       { "ignore": ["theme", "children", "className", "ref", "forwardedRef"] }
     ],
     "react/display-name": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

@@ -5,7 +5,7 @@ import Book from "icons/Book"
 import { useTranslations } from "hooks"
 
 const Header = () => {
-  const { changeLocale, trans } = useTranslations()
+  const { changeLocale, t } = useTranslations()
   const [locale, setLocale] = useState("en")
 
   const onChangeLanguage = locale => {
@@ -15,15 +15,15 @@ const Header = () => {
 
   return (
     <Navbar>
-      <Navbar.Brand title={trans("header.title")}>
+      <Navbar.Brand title={t("header.title")}>
         <Book />
       </Navbar.Brand>
-      <Navbar.Language selectedLanguage={trans(`header.${locale}`)}>
+      <Navbar.Language selectedLanguage={t(`header.${locale}`)}>
         <Navbar.LanguageItem onClick={() => onChangeLanguage("en")}>
-          {trans("header.en")}
+          {t("header.en")}
         </Navbar.LanguageItem>
         <Navbar.LanguageItem onClick={() => onChangeLanguage("fr")}>
-          {trans("header.fr")}
+          {t("header.fr")}
         </Navbar.LanguageItem>
       </Navbar.Language>
     </Navbar>

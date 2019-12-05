@@ -1,16 +1,47 @@
 import React from "react"
-import { StyledProvider } from "components-extra"
+import { BackToTop, StyledProvider } from "components-extra"
+import { CardMedia, Container } from "@material-ui/core"
+import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 import { TranslationsProvider } from "hooks"
+import background from "images/background.png"
 
 import Header from "./Header"
 
 const Layout = ({ children }) => {
+  const { placeholderImage } = useStaticQuery(
+    graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "background.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const { fluid } = placeholderImage.childImageSharp
+
   return (
     <StyledProvider>
       <TranslationsProvider>
-        <Header />
-        <main>{children}</main>
+        <>
+          <Header />
+          <CardMedia image={background}>
+            <Container
+              maxWidth={false}
+              component={BackgroundImage}
+              fluid={fluid}
+            >
+              <main>{children}</main>
+              <BackToTop />
+            </Container>
+          </CardMedia>
+        </>
       </TranslationsProvider>
     </StyledProvider>
   )

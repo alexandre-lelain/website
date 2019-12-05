@@ -16,6 +16,7 @@
   "scripts": {
     "build": "gatsby build",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint": "yarn eslint --cache src/**/*.js",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -23,8 +24,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.7.1",
-    "components-extra": "^2.0.0",
+    "components-extra": "^2.0.2",
     "gatsby": "^2.18.4",
+    "gatsby-background-image": "^0.9.11",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-manifest": "^2.2.30",

@@ -17,6 +17,7 @@ module.exports = {
           hooks: path.resolve(__dirname, "src/hooks"),
           translations: path.resolve(__dirname, "src/translations"),
           lodash: path.resolve(__dirname, "node_modules/lodash-es"),
+          images: path.resolve(__dirname, "src/images"),
         },
       },
     },
