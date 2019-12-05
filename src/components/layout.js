@@ -7,6 +7,7 @@ import BackgroundImage from "gatsby-background-image"
 import { TranslationsProvider } from "hooks"
 import background from "images/background.png"
 
+import Footer from "./Footer"
 import Header from "./Header"
 
 const Layout = ({ children }) => {
@@ -38,9 +39,10 @@ const Layout = ({ children }) => {
               fluid={fluid}
             >
               <main>{children}</main>
-              <BackToTop />
             </Container>
           </CardMedia>
+          <BackToTop />
+          <Footer />
         </>
       </TranslationsProvider>
     </StyledProvider>
