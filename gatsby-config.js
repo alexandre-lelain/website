@@ -12,7 +12,11 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
+          components: path.resolve(__dirname, "src/components"),
           icons: path.resolve(__dirname, "src/components/Icons"),
+          hooks: path.resolve(__dirname, "src/hooks"),
+          translations: path.resolve(__dirname, "src/translations"),
+          lodash: path.resolve(__dirname, "node_modules/lodash-es"),
         },
       },
     },
