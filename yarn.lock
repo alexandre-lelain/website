@@ -2989,10 +2989,10 @@ component-inherit@0.0.3:
   resolved "https://registry.yarnpkg.com/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
   integrity sha1-ZF/ErfWLcrZJ1crmUTVhnbJv8UM=
 
-components-extra@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/components-extra/-/components-extra-2.0.2.tgz#5f2c3e21b026eeff37cfa9d2c78e3189342846ba"
-  integrity sha512-XKHJ9UpcwjAqmavJDAkfvYKcUeIcBKF+R5qT7oVcZV+OdUWl+rNqFlHJLPhop+QfxUrKAv6GDZU2wA2Y4EvFpQ==
+components-extra@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/components-extra/-/components-extra-2.0.3.tgz#ec5e7396c7af24ad97641ae5b33c3456022853ab"
+  integrity sha512-A/KkDYyh1KiXOq9cKasuT2jkitXpmMugeyYczRzZKowf6DyUU4TEycs1MaW2PPamGMI7qxrE2pD/3z5/6vZGsg==
   dependencies:
     "@material-ui/core" "^4.5.2"
     "@material-ui/styles" "^4.5.2"
