@@ -12,6 +12,7 @@ const loadTranslationForLocale = (locale = DEFAULT_LOCALE) =>
   require(`../translations/${locale}`)
 
 const TranslationsContext = createContext({})
+
 const TranslationsProvider = ({ children }) => {
   const savedPreferedLocale = getPreferedLocale()
   const [wordings, setWordings] = useState(
@@ -25,12 +26,18 @@ const TranslationsProvider = ({ children }) => {
   }
 
   return (
-    <TranslationsContext.Provider value={{ changeLocale, t }}>
+    <TranslationsContext.Provider
+      value={{ changeLocale, locale: savedPreferedLocale, t, wordings }}
+    >
       {children}
     </TranslationsContext.Provider>
   )
 }
 
-const useTranslations = () => useContext(TranslationsContext)
+const useTranslations = (prefix = "") => {
+  const { t, ...rest } = useContext(TranslationsContext)
+  const prefixedTrans = prefix ? key => t(`${prefix}.${key}`) : t
+  return { t: prefixedTrans, ...rest }
+}
 
 export { TranslationsProvider, useTranslations }

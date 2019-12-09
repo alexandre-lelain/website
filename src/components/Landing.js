@@ -43,11 +43,6 @@ export default () => {
         <Coffee />
       </Description>
       <Separator />
-      <h1>qsdqsd</h1>
-      <h1>qsdqsd</h1>
-      <h1>qsdqsd</h1>
-      <h1>qsdqsd</h1>
-      <h1>qsdqsd</h1>
     </Container>
   )
 }

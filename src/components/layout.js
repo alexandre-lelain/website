@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { BackToTop, StyledProvider } from "components-extra"
 import { CardMedia, Container } from "@material-ui/core"
 import { useStaticQuery, graphql } from "gatsby"
@@ -9,6 +10,10 @@ import background from "images/background.png"
 
 import Footer from "./Footer"
 import Header from "./Header"
+
+const StyledContainer = styled(Container)`
+  padding-bottom: 128px;
+`
 
 const Layout = ({ children }) => {
   const { placeholderImage } = useStaticQuery(
@@ -33,13 +38,13 @@ const Layout = ({ children }) => {
         <>
           <Header />
           <CardMedia image={background}>
-            <Container
+            <StyledContainer
               maxWidth={false}
               component={BackgroundImage}
               fluid={fluid}
             >
               <main>{children}</main>
-            </Container>
+            </StyledContainer>
           </CardMedia>
           <BackToTop />
           <Footer />
