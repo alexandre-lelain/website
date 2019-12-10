@@ -2,7 +2,7 @@
   "name": "home",
   "private": true,
   "description": "My portfolio's website",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": "Alexandre Le Lain <lelain.alexandre@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -16,6 +16,7 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "deploy": "bash scripts/deploy.sh",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "lint": "yarn eslint --cache src/**/*.js",
     "start": "gatsby develop",
