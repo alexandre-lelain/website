@@ -34,7 +34,7 @@ module.exports = {
       title: "Components-extra",
       description: `An open-source lib made of React components. Based on styled-components' styling system and material-ui's standards, it aims to provide web developers with a set of 'complex' but fast-to-use components to build web apps the fastest posible.
       The lib follow the compound-components pattern to offer the best customization possible for the developers. 
-      Fun fact: this website was build with this lib! :) 
+      Fun fact: this website was built with this lib! :) 
       `,
       controls: [
         {
