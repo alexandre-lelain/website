@@ -3,10 +3,17 @@ import { get } from "lodash"
 
 const DEFAULT_LOCALE = "en"
 
-const setPreferedLocale = (locale = DEFAULT_LOCALE) =>
-  localStorage && localStorage.setItem("locale", locale)
-const getPreferedLocale = () =>
-  (localStorage && localStorage.getItem("locale")) || DEFAULT_LOCALE
+const setPreferedLocale = (locale = DEFAULT_LOCALE) => {
+  if (typeof window !== "undefined") {
+    localStorage.setItem("locale", locale)
+  }
+}
+const getPreferedLocale = () => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("locale") || DEFAULT_LOCALE
+  }
+  return DEFAULT_LOCALE
+}
 
 const loadTranslationForLocale = (locale = DEFAULT_LOCALE) =>
   require(`../translations/${locale}`)
