@@ -1,6 +1,6 @@
 module.exports = {
   header: {
-    title: "Mon Portfolio - Alexandre Le Lain",
+    title: "Mon Portfolio",
     en: "English",
     fr: "Français",
   },
