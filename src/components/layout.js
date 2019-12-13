@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import { TranslationsProvider } from "hooks"
-import background from "images/background.png"
+import background from "images/background.jpg"
 
 import Footer from "./Footer"
 import Header from "./Header"
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "background.png" }) {
+        placeholderImage: file(relativePath: { eq: "background.jpg" }) {
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid

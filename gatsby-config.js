@@ -35,9 +35,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        display: `minimal-ui`,
         name: `home`,
         short_name: `home`,
         start_url: `/`,
+        background_color: `#404040`,
+        theme_color: `#404040`,
         icon: `src/images/profile.png`,
       },
     },

@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Media from "images/top_shape.png"
+import Media from "images/top_shape.webp"
 
 import BaseProject from "./BaseProject"
 
@@ -8,7 +8,7 @@ export default () => {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "top_shape.png" }) {
+        placeholderImage: file(relativePath: { eq: "top_shape.webp" }) {
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid
