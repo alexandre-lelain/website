@@ -1,6 +1,14 @@
 module.exports = {
   header: {
     title: "My Portfolio",
+    menu: {
+      cv: "My CV",
+      ce: "Components-extra",
+      je: "Js-extra",
+      avd: "Avec vous demain",
+      rest: "{...rest}",
+      contact: "Contact",
+    },
     en: "English",
     fr: "Français",
   },

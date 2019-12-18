@@ -22,6 +22,7 @@ export default () => {
 
   return (
     <BaseProject
+      id="avec-vous-demain"
       image={{ src: Media, fluid }}
       prefix="projects.avecVousDemain"
     />

@@ -22,7 +22,7 @@ export default () => {
   const { t } = useTranslations()
 
   return (
-    <Footer title={t("footer.title")} bottomBanner={BottomBanner}>
+    <Footer id="contact" title={t("footer.title")} bottomBanner={BottomBanner}>
       <Footer.Column isInline>
         <Footer.Item href="mailto:lelain.alexandre@gmail.com">
           <Mail />

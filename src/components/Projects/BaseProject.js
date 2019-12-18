@@ -6,7 +6,7 @@ import { get, map } from "lodash"
 
 import { useTranslations } from "hooks"
 
-const BaseProject = ({ image = {}, prefix = "" }) => {
+const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
   const { t, wordings } = useTranslations(prefix)
   const { src, fluid } = image
   const controls = get(wordings, prefix + ".controls", [])
@@ -18,6 +18,7 @@ const BaseProject = ({ image = {}, prefix = "" }) => {
       description={t("description")}
       image={{ component: Img, fluid, src }}
       title={t("title")}
+      {...rest}
     >
       {map(controls, control => {
         const { label, link } = control

@@ -22,6 +22,7 @@ export default () => {
 
   return (
     <BaseProject
+      id="components-extra"
       image={{ src: Media, fluid }}
       prefix="projects.componentsExtra"
     />
