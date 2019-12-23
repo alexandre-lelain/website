@@ -33,7 +33,7 @@ module.exports = {
         "My web-resume made with ❤ with React. You will find everything about my past experience, my diploma and my hobbies there.",
       controls: [
         {
-          label: "Click to know more",
+          label: "Visit my web-resume",
           link: "https://alexandre-lelain.github.io/my-website/",
         },
       ],
@@ -76,7 +76,7 @@ module.exports = {
         "This is a public website promoting a new book written by one member of my family. I'm sorry to say that it's only available in french so far. Maybe a good opportunity for you to learn this complex and beautiful language if you want to know more about the book? ;)",
       controls: [
         {
-          label: "Click to know more",
+          label: "let's have a tour",
           link: "https://www.avec-vous-demain.com/",
         },
       ],
