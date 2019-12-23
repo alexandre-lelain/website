@@ -16,13 +16,11 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "deploy": "bash scripts/deploy.sh",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "lint": "yarn eslint --cache src/**/*.js",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@material-ui/core": "^4.7.1",
