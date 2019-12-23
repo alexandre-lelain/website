@@ -1,8 +1,27 @@
-import React, { memo } from "react"
-import SvgIcon from "@material-ui/core/SvgIcon"
+import React from "react"
+import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-export default memo(props => (
-  <SvgIcon viewBox="0 0 24 24" height="24" width="24" {...props}>
-    <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"></path>
-  </SvgIcon>
-))
+const StyledImage = styled(Img)`
+  border-radius: 50%;
+`
+
+export default () => {
+  const { placeholderImage } = useStaticQuery(
+    graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "coffee.webp" }) {
+          childImageSharp {
+            fixed(quality: 100, width: 64) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `
+  )
+  const { fixed } = placeholderImage.childImageSharp
+
+  return <StyledImage fixed={fixed} />
+}

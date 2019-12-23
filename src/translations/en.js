@@ -1,6 +1,6 @@
 module.exports = {
   header: {
-    title: "My Portfolio",
+    title: "Alexandre Le Lain",
     menu: {
       cv: "My CV",
       ce: "Components-extra",

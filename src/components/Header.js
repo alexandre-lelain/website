@@ -14,6 +14,12 @@ const StyledMenu = styled(Navbar.Menu)`
   `};
 `
 
+const StyledBrand = styled(Navbar.Brand)`
+  * {
+    line-height: normal;
+  }
+`
+
 const Header = () => {
   const { changeLocale, locale, t } = useTranslations("header")
   const [selectedLocale, setLocale] = useState(locale)
@@ -25,9 +31,9 @@ const Header = () => {
 
   return (
     <Navbar>
-      <Navbar.Brand title={t("title")}>
+      <StyledBrand title={t("title")}>
         <Book />
-      </Navbar.Brand>
+      </StyledBrand>
       <StyledMenu label="navigation-menu">
         <Navbar.MenuItem href="#my-website">{t("menu.cv")}</Navbar.MenuItem>
         <Navbar.MenuItem href="#components-extra">
