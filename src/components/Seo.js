@@ -58,6 +58,10 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `google-site-verification`,
+          content: "4qrOnPgd8VK4q-ZYzMsB7k0nTk3l5Aka4jfegzxfDic",
+        },
       ]
         .concat(
           keywords.length > 0
@@ -72,10 +76,6 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      />
-      <meta
-        name="google-site-verification"
-        content="4qrOnPgd8VK4q-ZYzMsB7k0nTk3l5Aka4jfegzxfDic"
       />
     </Helmet>
   )
