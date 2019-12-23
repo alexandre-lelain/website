@@ -1059,7 +1059,7 @@
   dependencies:
     core-js "^2.5.7"
 
-"@material-ui/core@^4.5.2", "@material-ui/core@^4.7.1":
+"@material-ui/core@^4.7.1":
   version "4.7.1"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.7.1.tgz#87b83da3f6adf45772c0a2be9fd9d162e026f10c"
   integrity sha512-gqbZqpwUT5/59KTrWyA9Mr9s8NaNyfWHlEQToM1tfpiHqrIJajLVg2ZgVDzExvN985v2YQIfbuTNVzJDOnM28Q==
@@ -1079,7 +1079,27 @@
     react-is "^16.8.0"
     react-transition-group "^4.3.0"
 
-"@material-ui/styles@^4.5.2", "@material-ui/styles@^4.7.1":
+"@material-ui/core@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.8.0.tgz#8fb4f4df2b35e3e781b1eec17d4aaf388edf3099"
+  integrity sha512-ODyvWlDOP0D3tU32wVlYRNrdS+LeJxB3xJbXdDxq6gnG4JhKk79+ylP0cImjPBI2yEZw0hcYHWFZOGD+0R1X4g==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@material-ui/styles" "^4.7.1"
+    "@material-ui/system" "^4.7.1"
+    "@material-ui/types" "^4.1.1"
+    "@material-ui/utils" "^4.7.1"
+    "@types/react-transition-group" "^4.2.0"
+    clsx "^1.0.2"
+    convert-css-length "^2.0.1"
+    hoist-non-react-statics "^3.2.1"
+    normalize-scroll-left "^0.2.0"
+    popper.js "^1.14.1"
+    prop-types "^15.7.2"
+    react-is "^16.8.0"
+    react-transition-group "^4.3.0"
+
+"@material-ui/styles@^4.7.1":
   version "4.7.1"
   resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.7.1.tgz#48fa70f06441c35e301a9c4b6c825526a97b7a29"
   integrity sha512-BBfxVThaPrglqHmKtSdrZJxnbFGJqKdZ5ZvDarj3HsmkteGCXsP1ohrDi5TWoa5JEJFo9S6q6NywqsENZn9rZA==
@@ -3023,13 +3043,13 @@ component-inherit@0.0.3:
   resolved "https://registry.yarnpkg.com/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
   integrity sha1-ZF/ErfWLcrZJ1crmUTVhnbJv8UM=
 
-components-extra@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/components-extra/-/components-extra-2.1.4.tgz#fbc48f427a8e4bd03f956cc1f6b78cc4ea650f30"
-  integrity sha512-9nPvFSDQwOVxubivegFSqe5mhVD6PNrQvRh3E3tT1C7XFq7iCmQRpYOi16H6jwQa/hhzr3GyVhqyiBVSES0NCg==
+components-extra@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/components-extra/-/components-extra-2.2.1.tgz#1941ac967d5d35bdcdc002a28a0750a4490aeddd"
+  integrity sha512-fJ+QxiiHvQ3idKd0+NWUTV4BULUaordZQPkVYLGr+o/UZG+zNm5wOqCujgNTqiNR622k+L6jKJPcoJAyQtK4+Q==
   dependencies:
-    "@material-ui/core" "^4.5.2"
-    "@material-ui/styles" "^4.5.2"
+    "@material-ui/core" "^4.8.0"
+    "@material-ui/styles" "^4.7.1"
     prop-types "^15.7.2"
 
 compressible@~2.0.16:
