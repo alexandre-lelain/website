@@ -28,7 +28,7 @@ const Header = () => {
       <Navbar.Brand title={t("title")}>
         <Book />
       </Navbar.Brand>
-      <StyledMenu>
+      <StyledMenu label="navigation-menu">
         <Navbar.MenuItem href="#my-website">{t("menu.cv")}</Navbar.MenuItem>
         <Navbar.MenuItem href="#components-extra">
           {t("menu.ce")}
