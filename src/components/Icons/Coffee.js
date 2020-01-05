@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 
 const StyledImage = styled(Img)`
   border-radius: 50%;
+  margin-bottom: 64px;
 `
 
 export default () => {

@@ -26,7 +26,7 @@ const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
           <Card.Button
             key={label}
             href={link}
-            target="__blank"
+            target="_blank"
             rel="noreferrer noopener"
           >
             {label}

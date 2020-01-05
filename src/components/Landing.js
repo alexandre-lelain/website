@@ -36,12 +36,8 @@ export default () => {
   return (
     <Container>
       <Title>{t("landing.title")}</Title>
-      <Description>
-        {t("landing.description")}
-        <br />
-        <br />
-        <Coffee />
-      </Description>
+      <Description>{t("landing.description")}</Description>
+      <Coffee />
       <Separator />
     </Container>
   )
