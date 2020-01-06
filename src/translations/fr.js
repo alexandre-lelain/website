@@ -41,7 +41,7 @@ module.exports = {
     componentsExtra: {
       title: "Components-extra",
       description: `Une lib open-source de composants React. Basée sur le système de style de styled-components, et sur les standards de material-ui, elle sert à fournir à des développeurs un set de composants dits 'molécules' pour monter un site web le plus rapidement possible.
-      La lib suit le pattern compound-components pour offir une personalisation optimale.
+      La lib suit le pattern compound-components pour offrir une personnalisation optimale.
       Ce site est justement construit avec cette lib! :)
       `,
       controls: [
@@ -58,7 +58,7 @@ module.exports = {
     jsExtra: {
       title: "Js-extra",
       description:
-        "Une lib JavaScript! Cette lib open-source disponible sur npm propose des fonctions très utiles qui ne sont pas natives à Javascript. Elle sert de complèment à de celèbres librairies comme Lodash ou underscore.js.",
+        "Une lib JavaScript! Cette lib open-source disponible sur npm propose des fonctions très utiles qui ne sont pas natives à Javascript. Elle sert de complément à de célèbres librairies comme Lodash ou Underscore.js.",
       controls: [
         {
           label: "module npm",
