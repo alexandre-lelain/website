@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { Paragraph } from "components-extra"
 import { Typography } from "@material-ui/core"
 
-import Coffee from "icons/Coffee"
 import { useTranslations } from "hooks"
 
 const Container = styled.div`
@@ -27,7 +26,7 @@ const Description = styled(Paragraph).attrs({
 
 const Separator = styled.hr`
   width: 60%;
-  margin: 24px 0px;
+  margin: 24px 0px 0px 0px;
 `
 
 export default () => {
@@ -37,7 +36,6 @@ export default () => {
     <Container>
       <Title>{t("landing.title")}</Title>
       <Description>{t("landing.description")}</Description>
-      <Coffee />
       <Separator />
     </Container>
   )

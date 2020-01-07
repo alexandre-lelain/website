@@ -2,7 +2,7 @@
   "name": "home",
   "private": true,
   "description": "My portfolio's website",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "author": "Alexandre Le Lain <lelain.alexandre@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.7.1",
-    "components-extra": "^2.2.1",
+    "components-extra": "^2.2.3",
     "gatsby": "^2.18.4",
     "gatsby-background-image": "^0.9.11",
     "gatsby-image": "^2.2.34",

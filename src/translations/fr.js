@@ -40,10 +40,12 @@ module.exports = {
     },
     componentsExtra: {
       title: "Components-extra",
-      description: `Une lib open-source de composants React. Basée sur le système de style de styled-components, et sur les standards de material-ui, elle sert à fournir à des développeurs un set de composants dits 'molécules' pour monter un site web le plus rapidement possible.
-      La lib suit le pattern compound-components pour offrir une personnalisation optimale.
-      Ce site est justement construit avec cette lib! :)
-      `,
+      description: [
+        `Une lib open-source de composants React.`,
+        `Basée sur le système de style de styled-components, et sur les standards de material-ui, elle sert à fournir à des développeurs un set de composants dits 'molécules' pour monter un site web rapidement et efficacement.`,
+        `La lib suit le pattern compound-components pour offrir une personnalisation optimale.`,
+        `Ce site est justement construit avec cette lib! :)`,
+      ],
       controls: [
         {
           label: "module npm",
@@ -57,8 +59,11 @@ module.exports = {
     },
     jsExtra: {
       title: "Js-extra",
-      description:
-        "Une lib JavaScript! Cette lib open-source disponible sur npm propose des fonctions très utiles qui ne sont pas natives à Javascript. Elle sert de complément à de célèbres librairies comme Lodash ou Underscore.js.",
+      description: [
+        `Fait ce que JavaScript ne fait pas.`,
+        `Cette lib open-source disponible sur npm propose des fonctions très utiles qui ne sont pas natives à Javascript. Elle sert de complément à de célèbres librairies comme Lodash ou Underscore.js.`,
+        `Écrite en TypeScript, la lib se soit d'être très légère. Il ne faudrait pas allourdir encore plus nos node_modules!`,
+      ],
       controls: [
         {
           label: "module npm",
@@ -72,8 +77,11 @@ module.exports = {
     },
     avecVousDemain: {
       title: "Avec Vous Demain",
-      description:
-        "Un site web vitrine conçu spécialement pour un membre de ma famille afin de faire la promotion de son nouveau livre. Le site permet d'avoir un avant-goût du livre en question grâce à quelques extraits, propose une biographie de l'auteur et affiche plusieurs liens vers des plateformes de ventes en ligne pour se procurer le livre.",
+      description: [
+        `Un site web vitrine conçu spécialement pour un membre de ma famille afin de faire la promotion de son nouveau livre.`,
+        `Le site permet d'avoir un avant-goût du livre en question grâce à quelques extraits, propose une biographie de l'auteur et affiche plusieurs liens vers des plateformes de ventes en ligne pour se procurer le livre.`,
+        `Il a été construit avec Gatsby.js pour optimiser le lazy-loading des ressources ainsi que profiter d'une bonne configuration de SEO.`,
+      ],
       controls: [
         {
           label: "Visiter le site",

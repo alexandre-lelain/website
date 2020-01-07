@@ -1,21 +1,38 @@
-import React from "react"
+import React, { Fragment } from "react"
+import { Typography } from "@material-ui/core"
 import PropTypes from "prop-types"
 import { Card } from "components-extra"
 import Img from "gatsby-image"
-import { get, map } from "lodash"
+import { last, get, map } from "lodash"
 
 import { useTranslations } from "hooks"
+
+const ComplexDescription = ({ descriptions = [] }) => {
+  const lastElement = last(descriptions)
+  return (
+    <Fragment>
+      {map(descriptions, (description, index) => (
+        <Typography paragraph={description !== lastElement} key={index}>
+          {description}
+        </Typography>
+      ))}
+    </Fragment>
+  )
+}
 
 const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
   const { t, wordings } = useTranslations(prefix)
   const { src, fluid } = image
   const controls = get(wordings, prefix + ".controls", [])
 
+  const description = t("description")
+  const descriptions = Array.isArray(description) ? description : [description]
+
   return (
     <Card
       big
       component="section"
-      description={t("description")}
+      description={<ComplexDescription descriptions={descriptions} />}
       image={{ component: Img, fluid, src }}
       title={t("title")}
       {...rest}
@@ -35,6 +52,10 @@ const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
       })}
     </Card>
   )
+}
+
+ComplexDescription.propTypes = {
+  descriptions: PropTypes.array,
 }
 
 BaseProject.propTypes = {

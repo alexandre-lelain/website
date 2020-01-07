@@ -40,10 +40,12 @@ module.exports = {
     },
     componentsExtra: {
       title: "Components-extra",
-      description: `An open-source lib made of React components. Based on styled-components' styling system and material-ui's standards, it aims to provide web developers with a set of 'complex' but fast-to-use components to build web apps the fastest posible.
-      The lib follow the compound-components pattern to offer the best customization possible for the developers. 
-      Fun fact: this website was built with this lib! :) 
-      `,
+      description: [
+        `An open-source lib made of React components.`,
+        `Based on styled-components' styling system and material-ui's standards, it aims to provide web developers with a set of customizable molecule components to build web apps fast and effectively.`,
+        `The lib follow the compound-components pattern to offer the best customization possible for the developers.`,
+        `Fun fact: this website was built with this lib! :)`,
+      ],
       controls: [
         {
           label: "npm package",
@@ -57,8 +59,11 @@ module.exports = {
     },
     jsExtra: {
       title: "Js-extra",
-      description:
-        "Does what native Javascript doesn't. This open-source JS lib is available on npm and provides some useful functions that are not built-in with native Javascript. This lib can be used in addition to the famous ones like Lodash or Underscore.Js.",
+      description: [
+        `Does what native Javascript doesn't.`,
+        `This open-source JS lib is available on npm and provides some useful functions that are not built-in with native Javascript. This lib can be used in addition to the famous ones like Lodash or Underscore.Js.`,
+        `It was written in TypeScript, and it aims to be the lightest posssible. We don't need to make the node_modules folder heavier than it already is!`,
+      ],
       controls: [
         {
           label: "npm package",
@@ -72,8 +77,11 @@ module.exports = {
     },
     avecVousDemain: {
       title: "Avec Vous Demain",
-      description:
-        "This is a public website promoting a new book written by one member of my family. I'm sorry to say that it's only available in french so far. Maybe a good opportunity for you to learn this complex and beautiful language if you want to know more about the book? ;)",
+      description: [
+        `This is a public website promoting a new book written by one member of my family. You will find some samples and some info about the author.`,
+        `I'm sorry to say that it's only available in french so far. Maybe a good opportunity for you to learn this complex and beautiful language if you want to know more about the book? ;)`,
+        `The website was built using Gatsby.js to take advantage of its lazy-loading & SEO plugins.`,
+      ],
       controls: [
         {
           label: "let's have a tour",
