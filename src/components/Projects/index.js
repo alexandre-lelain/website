@@ -22,7 +22,7 @@ const Container = styled.div`
 
     ${({ theme }) => `
       @media(max-width: ${theme.breakpoints.values.md}px) {
-        width: 80%;
+        width: 90%;
       }
     `};
   }
