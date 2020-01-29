@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { BackToTop, StyledProvider } from "components-extra"
 import { CardMedia, Container } from "@material-ui/core"
@@ -8,6 +8,7 @@ import BackgroundImage from "gatsby-background-image"
 import { TranslationsProvider } from "hooks"
 import background from "images/background.jpg"
 
+import Fonts from "./Fonts"
 import Footer from "./Footer"
 import Header from "./Header"
 
@@ -29,6 +30,10 @@ const Layout = ({ children }) => {
       }
     `
   )
+
+  useEffect(() => {
+    Fonts()
+  }, [])
 
   const { fluid } = placeholderImage.childImageSharp
 
