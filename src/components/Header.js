@@ -6,10 +6,10 @@ import Book from "icons/Book"
 import { useTranslations } from "hooks"
 
 const StyledMenu = styled(Navbar.Menu)`
-  margin-right: 24px;
+  margin-left: 12px;
   ${({ theme }) => `
     @media(max-width: ${theme.breakpoints.values.md}px) {
-      margin-right: 12px;
+      margin-left: 0px;
     }
   `};
 `
@@ -28,6 +28,14 @@ const Header = () => {
       <Navbar.Brand title={t("title")}>
         <Book />
       </Navbar.Brand>
+      <Navbar.Language selectedLanguage={t(`${selectedLocale}`)}>
+        <Navbar.LanguageItem onClick={() => onChangeLanguage("en")}>
+          {t("en")}
+        </Navbar.LanguageItem>
+        <Navbar.LanguageItem onClick={() => onChangeLanguage("fr")}>
+          {t("fr")}
+        </Navbar.LanguageItem>
+      </Navbar.Language>
       <StyledMenu label="navigation-menu">
         <Navbar.MenuItem href="#my-website">{t("menu.cv")}</Navbar.MenuItem>
         <Navbar.MenuItem href="#components-extra">
@@ -40,14 +48,6 @@ const Header = () => {
         <Navbar.MenuItem href="#top-shape">{t("menu.rest")}</Navbar.MenuItem>
         <Navbar.MenuItem href="#contact">{t("menu.contact")}</Navbar.MenuItem>
       </StyledMenu>
-      <Navbar.Language selectedLanguage={t(`${selectedLocale}`)}>
-        <Navbar.LanguageItem onClick={() => onChangeLanguage("en")}>
-          {t("en")}
-        </Navbar.LanguageItem>
-        <Navbar.LanguageItem onClick={() => onChangeLanguage("fr")}>
-          {t("fr")}
-        </Navbar.LanguageItem>
-      </Navbar.Language>
     </Navbar>
   )
 }
