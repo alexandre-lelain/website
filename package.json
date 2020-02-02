@@ -23,7 +23,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "components-extra": "^2.2.3",
+    "components-extra": "^2.3.1",
     "fontfaceobserver": "^2.1.0",
     "gatsby": "^2.18.4",
     "gatsby-background-image": "^0.9.11",
