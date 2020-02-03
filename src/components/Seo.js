@@ -72,7 +72,14 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
             : []
         )
         .concat(meta)}
-    ></Helmet>
+    >
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        media="print"
+        onLoad="this.media='all'"
+      />
+    </Helmet>
   )
 }
 

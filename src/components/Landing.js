@@ -13,14 +13,17 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Title = styled(Typography).attrs({ color: "secondary", variant: "h1" })`
+const Title = styled(Typography).attrs(() => ({
+  color: "secondary",
+  variant: "h1",
+}))`
   margin-top: calc(10vh + 4vw);
   font-size: calc(9vh + 1vw);
 `
-const Description = styled(Paragraph).attrs({
+const Description = styled(Paragraph).attrs(() => ({
   color: "secondary",
   variant: "h4",
-})`
+}))`
   margin: 48px 0px;
 `
 
