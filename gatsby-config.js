@@ -5,6 +5,15 @@ module.exports = {
     title: `Alexandre Le Lain`,
     description: `Check out all of Alexandre Le Lain's projects on this website!`,
     author: `@a_lelain`,
+    url: "https://atti-components.netlify.com/",
+    keywords: [
+      "Alexandre Le Lain",
+      "Portfolio",
+      "Projects",
+      "Open Source",
+      "OSS",
+    ],
+    image: "https://alexandre-lelain.netlify.com/icons/icon-512x512.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

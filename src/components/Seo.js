@@ -12,19 +12,26 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
             title
             description
             author
+            url
+            keywords
+            image
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaData = site.siteMetadata
+
+  const metaDescription = description || metaData.description
+  const metaKeywords = [...metaData.keywords, ...keywords]
+  const metaTitle = title ? `${title} | ${metaData.title}` : metaData.title
 
   return (
     <Helmet
       htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${metaData.title}`}
       meta={[
         {
           name: `description`,
@@ -32,7 +39,7 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -40,23 +47,59 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
         },
         {
           property: `og:type`,
-          content: `portfolio website`,
+          content: `website`,
+        },
+        {
+          property: `og:url`,
+          content: metaData.url,
+        },
+        {
+          property: `og:image`,
+          content: metaData.image,
+        },
+        {
+          property: `og:site_name`,
+          content: metaTitle,
         },
         {
           name: `twitter:card`,
-          content: `IT engineer`,
+          content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: metaData.author,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
+        },
+        {
+          name: `twitter:url`,
+          content: metaData.url,
+        },
+        {
+          name: `twitter:site`,
+          content: metaData.author,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:label1`,
+          content: "Made by",
+        },
+        {
+          name: `twitter:label2`,
+          content: "Filed under",
+        },
+        {
+          name: `twitter:data1`,
+          content: "Alexandre Le Lain",
+        },
+        {
+          name: `twitter:data2`,
+          content: "Porfolio, projects",
         },
         {
           name: `google-site-verification`,
@@ -64,10 +107,10 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
         },
       ]
         .concat(
-          keywords.length > 0
+          metaKeywords.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`, `),
+                content: metaKeywords.join(`, `),
               }
             : []
         )
