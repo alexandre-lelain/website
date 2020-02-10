@@ -15,6 +15,7 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
             url
             keywords
             image
+            google
           }
         }
       }
@@ -103,7 +104,7 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
         },
         {
           name: `google-site-verification`,
-          content: "4qrOnPgd8VK4q-ZYzMsB7k0nTk3l5Aka4jfegzxfDic",
+          content: metaData.google,
         },
       ]
         .concat(

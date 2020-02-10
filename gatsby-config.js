@@ -3,9 +3,9 @@ const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `Alexandre Le Lain`,
-    description: `Check out all of Alexandre Le Lain's projects on this website!`,
+    description: `My personal website. You can check out all of my projects here!`,
     author: `@a_lelain`,
-    url: "https://atti-components.netlify.com/",
+    url: "https://alexandre-lelain.dev/",
     keywords: [
       "Alexandre Le Lain",
       "Portfolio",
@@ -13,7 +13,8 @@ module.exports = {
       "Open Source",
       "OSS",
     ],
-    image: "https://alexandre-lelain.netlify.com/icons/icon-512x512.png",
+    image: "https://alexandre-lelain.dev/icons/icon-512x512.png",
+    google: "jE48qI1Ly0GhyV2yebIJb22CcBBMG4T88x_Qxd1hngk",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
