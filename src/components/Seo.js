@@ -27,12 +27,13 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
   const metaDescription = description || metaData.description
   const metaKeywords = [...metaData.keywords, ...keywords]
   const metaTitle = title ? `${title} | ${metaData.title}` : metaData.title
+  const titleTemplate = title ? `%s | ${metaData.title}` : metaData.title
 
   return (
     <Helmet
       htmlAttributes={{ lang }}
-      title={title}
-      titleTemplate={`%s | ${metaData.title}`}
+      title={metaTitle}
+      titleTemplate={titleTemplate}
       meta={[
         {
           name: `description`,
