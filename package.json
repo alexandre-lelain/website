@@ -2,7 +2,7 @@
   "name": "home",
   "private": true,
   "description": "My portfolio's website",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "author": "Alexandre Le Lain <lelain.alexandre@gmail.com>",
   "license": "MIT",
   "keywords": [
