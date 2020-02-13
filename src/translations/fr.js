@@ -80,7 +80,7 @@ module.exports = {
       description: [
         `Un site web vitrine conçu spécialement pour un membre de ma famille afin de faire la promotion de son nouveau livre.`,
         `Le site permet d'avoir un avant-goût du livre en question grâce à quelques extraits, propose une biographie de l'auteur et affiche plusieurs liens vers des plateformes de ventes en ligne pour se procurer le livre.`,
-        `Il a été construit avec Gatsby.js pour optimiser le lazy-loading des ressources ainsi que profiter d'une bonne configuration de SEO.`,
+        `Il a été construit avec components-extra et Gatsby.js pour optimiser le lazy-loading des ressources ainsi que profiter d'une bonne configuration de SEO.`,
       ],
       controls: [
         {

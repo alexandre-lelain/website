@@ -80,7 +80,7 @@ module.exports = {
       description: [
         `This is a public website promoting a new book written by one member of my family. You will find some samples and some info about the author.`,
         `I'm sorry to say that it's only available in french so far. Maybe a good opportunity for you to learn this complex and beautiful language if you want to know more about the book? ;)`,
-        `The website was built using Gatsby.js to take advantage of its lazy-loading & SEO plugins.`,
+        `The website was built using components-extra and Gatsby.js to take advantage of its lazy-loading & SEO plugins.`,
       ],
       controls: [
         {
