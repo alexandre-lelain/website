@@ -3120,12 +3120,12 @@ component-inherit@0.0.3:
   resolved "https://registry.yarnpkg.com/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
   integrity sha1-ZF/ErfWLcrZJ1crmUTVhnbJv8UM=
 
-components-extra@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/components-extra/-/components-extra-2.4.0.tgz#3d91c91ab0fe8031aed138be747918e273aa8097"
-  integrity sha512-ust7zZpdT8vLqU7Bx5sOaTCSqVOfxuFZwcIEA6F9nN1mH/ofkmhrLdMAKGMmoEvbMzaSK8Bci+f0yvG60XvkKg==
+components-extra@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/components-extra/-/components-extra-2.4.1.tgz#794e3e04ce405a7f5331c9cc066f1301a4e80a49"
+  integrity sha512-iG58yBrI01+udwD4ckWlk3sjqy2E6KzmpqBqxZ588OZcsLJPPmW58UVWPCLrUQeSLmyWeKx5iG2dyp67M4f2ng==
   dependencies:
-    lodash-es "^4.17.15"
+    "@babel/runtime" "^7.8.4"
     prop-types "^15.7.2"
 
 compressible@~2.0.16:
