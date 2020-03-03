@@ -1,4 +1,7 @@
 const path = require("path")
+require("dotenv").config({
+  path: `.env`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -15,7 +18,7 @@ module.exports = {
       "OSS",
     ],
     image: "https://alexandre-lelain.dev/icons/icon-512x512.png",
-    google: "jE48qI1Ly0GhyV2yebIJb22CcBBMG4T88x_Qxd1hngk",
+    google: process.env.GOOGLE || "",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
