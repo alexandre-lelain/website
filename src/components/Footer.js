@@ -9,9 +9,17 @@ import LinkedIn from "icons/LinkedIn"
 import Mail from "icons/Mail"
 import Twitter from "icons/Twitter"
 
+const BottomBannerText = styled(Typography).attrs(() => ({
+  variant: "body2",
+}))`
+  ${({ theme }) => `
+    color: ${theme.palette.secondary.dark};
+  `};
+`
+
 const BottomBanner = () => {
   const { t } = useTranslations()
-  return <Typography variant="body2">{t("footer.bottom")}</Typography>
+  return <BottomBannerText>{t("footer.bottom")}</BottomBannerText>
 }
 
 const Item = styled(Typography)`
