@@ -3,9 +3,9 @@ module.exports = {
     title: "Alexandre Le Lain",
     menu: {
       cv: "Mon CV",
+      code: "NoCode, NoBug",
       ce: "Components-extra",
       je: "Js-extra",
-      avd: "Avec vous demain",
       rest: "{...rest}",
       contact: "Contact",
     },
@@ -35,6 +35,25 @@ module.exports = {
         {
           label: "En avant toute!",
           link: "https://alexandre-lelain.github.io/my-website/",
+        },
+      ],
+    },
+    noCodeNoBug: {
+      title: "No Code, No Bug",
+      description: [
+        `No Code, No Bug. Un blog d'articles tech qui peuvent s'avérer utiles. Ou pas!`,
+        `Durant mon périple d'Ingénieur études et développement, je recontre des conceptes et des technologies que je ne comprend pas toujours aux premiers abords. Mais quand
+        je commence à saisir ce qu'il se passe sous le capot, j'écris un article qui, j'espère, pourra s'avérer utile aux autres développeurs.`,
+        `Fait avec components-extra, React & Gatsby.`,
+      ],
+      controls: [
+        {
+          label: "Github project",
+          link: "https://github.com/alexandre-lelain/nocode-nobug",
+        },
+        {
+          label: "Let's read some articles",
+          link: "https://nocode-nobug.com/",
         },
       ],
     },

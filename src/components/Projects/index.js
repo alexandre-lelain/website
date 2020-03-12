@@ -9,6 +9,7 @@ import AvecVousDemain from "./AvecVousDemain"
 import TopShape from "./TopShape"
 import AgentWeb from "./AgentWeb"
 import More from "./More"
+import NoCodeNoBug from "./NoCodeNoBug"
 
 const Container = styled.div`
   margin-top: 42px;
@@ -16,7 +17,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   ${Card} {
-    width: 50%;
+    width: 60%;
     min-width: 280px;
     margin: 48px 0px;
 
@@ -31,6 +32,7 @@ const Container = styled.div`
 export default () => (
   <Container>
     <MyWebsite />
+    <NoCodeNoBug />
     <ComponentsExtra />
     <JsExtra />
     <AvecVousDemain />

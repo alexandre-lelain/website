@@ -38,13 +38,11 @@ const Header = () => {
       </Navbar.Language>
       <StyledMenu label="navigation-menu">
         <Navbar.MenuItem href="#my-website">{t("menu.cv")}</Navbar.MenuItem>
+        <Navbar.MenuItem href="#nocode-nobug">{t("menu.code")}</Navbar.MenuItem>
         <Navbar.MenuItem href="#components-extra">
           {t("menu.ce")}
         </Navbar.MenuItem>
         <Navbar.MenuItem href="#js-extra">{t("menu.je")}</Navbar.MenuItem>
-        <Navbar.MenuItem href="#avec-vous-demain">
-          {t("menu.avd")}
-        </Navbar.MenuItem>
         <Navbar.MenuItem href="#top-shape">{t("menu.rest")}</Navbar.MenuItem>
         <Navbar.MenuItem href="#contact">{t("menu.contact")}</Navbar.MenuItem>
       </StyledMenu>
