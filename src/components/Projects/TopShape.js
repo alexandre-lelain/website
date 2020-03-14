@@ -10,7 +10,7 @@ export default () => {
       query {
         placeholderImage: file(relativePath: { eq: "top_shape.webp" }) {
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(quality: 90, maxWidth: 1200) {
               ...GatsbyImageSharpFluid
             }
           }
