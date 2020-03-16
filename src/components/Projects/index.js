@@ -17,7 +17,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   ${Card} {
-    width: 60%;
+    width: 50%;
     min-width: 280px;
     margin: 48px 0px;
 

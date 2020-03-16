@@ -1,20 +1,30 @@
 import React, { Fragment } from "react"
-import { Typography } from "@material-ui/core"
+import styled from "styled-components"
 import PropTypes from "prop-types"
-import { Card } from "components-extra"
+import { Card, Paragraph } from "components-extra"
 import Img from "gatsby-image"
 import { last, get, map } from "lodash"
 
 import { useTranslations } from "hooks"
+
+const StyledImg = styled(Img)`
+  ${({ theme: { palette } }) => `
+    border-bottom: 1px solid ${palette.secondary.main};
+  `};
+`
 
 const ComplexDescription = ({ descriptions = [] }) => {
   const lastElement = last(descriptions)
   return (
     <Fragment>
       {map(descriptions, (description, index) => (
-        <Typography paragraph={description !== lastElement} key={index}>
+        <Paragraph
+          paragraph={description !== lastElement}
+          key={index}
+          color="primary"
+        >
           {description}
-        </Typography>
+        </Paragraph>
       ))}
     </Fragment>
   )
@@ -33,7 +43,7 @@ const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
       big
       component="section"
       description={<ComplexDescription descriptions={descriptions} />}
-      image={{ component: Img, fluid, src }}
+      image={{ component: StyledImg, fluid, src }}
       title={t("title")}
       {...rest}
     >
