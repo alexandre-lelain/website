@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import { TranslationsProvider } from "hooks"
+import { theme } from "styles"
 import background from "images/background.webp"
 
 import Footer from "./Footer"
@@ -33,7 +34,7 @@ const Layout = ({ children }) => {
   const { fluid } = placeholderImage.childImageSharp
 
   return (
-    <StyledProvider>
+    <StyledProvider theme={theme}>
       <TranslationsProvider>
         <>
           <Header />
