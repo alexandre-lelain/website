@@ -8,6 +8,8 @@ import { useTranslations } from "hooks"
 const Container = styled.div`
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  word-break: break-word;
   text-align: center;
   flex-direction: column;
   align-items: center;

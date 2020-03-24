@@ -14,6 +14,10 @@ const StyledMenu = styled(Navbar.Menu)`
   `};
 `
 
+const StyledBrand = styled(Navbar.Brand)`
+  word-break: break-all;
+`
+
 const Header = () => {
   const { changeLocale, locale, t } = useTranslations("header")
   const [selectedLocale, setLocale] = useState(locale)
@@ -25,9 +29,9 @@ const Header = () => {
 
   return (
     <Navbar>
-      <Navbar.Brand title={t("title")}>
+      <StyledBrand title={t("title")}>
         <Book />
-      </Navbar.Brand>
+      </StyledBrand>
       <Navbar.Language selectedLanguage={t(`${selectedLocale}`)}>
         <Navbar.LanguageItem onClick={() => onChangeLanguage("en")}>
           {t("en")}

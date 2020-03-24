@@ -18,7 +18,6 @@ const Container = styled.div`
   align-items: center;
   ${Card} {
     width: 50%;
-    min-width: 260px;
     margin: 48px 0px;
 
     ${({ theme }) => `

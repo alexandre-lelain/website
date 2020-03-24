@@ -26,11 +26,19 @@ const Item = styled(Typography)`
   margin-left: 8px;
 `
 
+const StyledFooter = styled(Footer)`
+  word-break: break-word;
+`
+
 export default () => {
   const { t } = useTranslations()
 
   return (
-    <Footer id="contact" title={t("footer.title")} bottomBanner={BottomBanner}>
+    <StyledFooter
+      id="contact"
+      title={t("footer.title")}
+      bottomBanner={BottomBanner}
+    >
       <Footer.Column isInline>
         <Footer.Item href="mailto:lelain.alexandre@gmail.com">
           <Mail />
@@ -49,6 +57,6 @@ export default () => {
           <Item>{t("footer.linkedin")}</Item>
         </Footer.Item>
       </Footer.Column>
-    </Footer>
+    </StyledFooter>
   )
 }
