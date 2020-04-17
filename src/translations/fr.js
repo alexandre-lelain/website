@@ -48,11 +48,11 @@ module.exports = {
       ],
       controls: [
         {
-          label: "Github project",
+          label: "Projet sur Github",
           link: "https://github.com/alexandre-lelain/nocode-nobug",
         },
         {
-          label: "Let's read some articles",
+          label: "Lire quelques articles",
           link: "https://nocode-nobug.com/",
         },
       ],
