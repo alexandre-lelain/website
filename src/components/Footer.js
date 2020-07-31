@@ -37,7 +37,7 @@ export default () => {
     <StyledFooter
       id="contact"
       title={t("footer.title")}
-      bottomBanner={BottomBanner}
+      bottomBanner={<BottomBanner />}
     >
       <Footer.Column isInline>
         <Footer.Item href="mailto:lelain.alexandre@gmail.com">

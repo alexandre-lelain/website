@@ -14,18 +14,9 @@ import NoCodeNoBug from "./NoCodeNoBug"
 const Container = styled.div`
   margin-top: 42px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  ${Card} {
-    width: 50%;
-    margin: 48px 0px;
-
-    ${({ theme }) => `
-      @media(max-width: ${theme.breakpoints.values.md}px) {
-        width: 90%;
-      }
-    `};
-  }
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 `
 
 export default () => (

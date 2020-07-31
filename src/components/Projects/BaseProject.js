@@ -13,16 +13,29 @@ const StyledImg = styled(Img)`
   `};
 `
 
+const StyledCard = styled(Card)`
+  position: relative;
+  width: 30%;
+  margin: 48px 0px;
+
+  ${({ theme }) => `
+    @media(max-width: ${theme.breakpoints.values.md}px) {
+      width: 90%;
+    }
+  `};
+`
+
+const ButtonsContainer = styled.div`
+  position: absolute;
+  bottom: 8px;
+`
+
 const ComplexDescription = ({ descriptions = [] }) => {
   const lastElement = last(descriptions)
   return (
     <Fragment>
       {map(descriptions, (description, index) => (
-        <Paragraph
-          paragraph={description !== lastElement}
-          key={index}
-          color="primary"
-        >
+        <Paragraph paragraph={description !== lastElement} key={index}>
           {description}
         </Paragraph>
       ))}
@@ -39,7 +52,7 @@ const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
   const descriptions = Array.isArray(description) ? description : [description]
 
   return (
-    <Card
+    <StyledCard
       big
       component="section"
       description={<ComplexDescription descriptions={descriptions} />}
@@ -47,7 +60,7 @@ const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
       title={t("title")}
       {...rest}
     >
-      {map(controls, control => {
+      {map(controls, (control) => {
         const { label, link } = control
         return (
           <Card.Button
@@ -60,7 +73,7 @@ const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
           </Card.Button>
         )
       })}
-    </Card>
+    </StyledCard>
   )
 }
 

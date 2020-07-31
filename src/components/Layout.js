@@ -14,6 +14,7 @@ import Header from "./Header"
 
 const StyledContainer = styled(Container)`
   padding-bottom: 128px;
+  background-color: aliceblue;
 `
 
 const Layout = ({ children }) => {
@@ -38,15 +39,9 @@ const Layout = ({ children }) => {
       <TranslationsProvider>
         <>
           <Header />
-          <CardMedia image={background}>
-            <StyledContainer
-              maxWidth={false}
-              component={BackgroundImage}
-              fluid={fluid}
-            >
-              <main>{children}</main>
-            </StyledContainer>
-          </CardMedia>
+          <StyledContainer maxWidth={false}>
+            <main>{children}</main>
+          </StyledContainer>
           <BackToTop />
           <Footer />
         </>

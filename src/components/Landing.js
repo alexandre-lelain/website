@@ -2,8 +2,22 @@ import React from "react"
 import styled from "styled-components"
 import { Paragraph } from "components-extra"
 import { Typography } from "@material-ui/core"
+import { graphql, useStaticQuery } from "gatsby"
+import Image from "gatsby-image"
 
 import { useTranslations } from "hooks"
+
+const query = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "profile.webp" }) {
+      childImageSharp {
+        fixed(webpQuality: 100, width: 156) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 const Container = styled.div`
   height: 100%;
@@ -16,14 +30,15 @@ const Container = styled.div`
 `
 
 const Title = styled(Typography).attrs(() => ({
-  color: "secondary",
+  color: "primary",
   variant: "h1",
 }))`
   margin-top: calc(10vh + 4vw);
   font-size: calc(9vh + 1vw);
+  margin-bottom: 32px;
 `
 const Description = styled(Paragraph).attrs(() => ({
-  color: "secondary",
+  color: "primary",
   variant: "h4",
 }))`
   margin: 48px 0px;
@@ -35,11 +50,14 @@ const Separator = styled.hr`
 `
 
 export default () => {
+  const { placeholderImage } = useStaticQuery(query)
   const { t } = useTranslations()
+  const { fixed } = placeholderImage.childImageSharp
 
   return (
     <Container>
       <Title>{t("landing.title")}</Title>
+      <Image alt="That's me!" fixed={fixed} />
       <Description>{t("landing.description")}</Description>
       <Separator />
     </Container>

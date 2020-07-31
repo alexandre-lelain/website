@@ -22,13 +22,13 @@ const Header = () => {
   const { changeLocale, locale, t } = useTranslations("header")
   const [selectedLocale, setLocale] = useState(locale)
 
-  const onChangeLanguage = locale => {
+  const onChangeLanguage = (locale) => {
     setLocale(locale)
     changeLocale && changeLocale(locale)
   }
 
   return (
-    <Navbar>
+    <Navbar position="relative">
       <StyledBrand title={t("title")}>
         <Book />
       </StyledBrand>
