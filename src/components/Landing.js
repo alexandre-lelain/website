@@ -7,12 +7,21 @@ import Image from "gatsby-image"
 
 import { useTranslations } from "hooks"
 
+const StyledImage = styled(Image)`
+  width: 156px;
+  ${({ theme }) => `
+    @media(max-width: ${theme.breakpoints.values.md}px) {
+      width: 108px;
+    }
+  `};
+`
+
 const query = graphql`
   query {
     placeholderImage: file(relativePath: { eq: "profile.webp" }) {
       childImageSharp {
-        fixed(webpQuality: 100, width: 156) {
-          ...GatsbyImageSharpFixed
+        fluid(webpQuality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -32,14 +41,16 @@ const Container = styled.div`
 const Title = styled(Typography).attrs(() => ({
   color: "primary",
   variant: "h1",
+  component: "h1",
 }))`
   margin-top: calc(10vh + 4vw);
-  font-size: calc(9vh + 1vw);
+  font-size: 5em;
   margin-bottom: 32px;
 `
 const Description = styled(Paragraph).attrs(() => ({
   color: "primary",
   variant: "h4",
+  component: "h2",
 }))`
   margin: 48px 0px;
 `
@@ -52,12 +63,12 @@ const Separator = styled.hr`
 export default () => {
   const { placeholderImage } = useStaticQuery(query)
   const { t } = useTranslations()
-  const { fixed } = placeholderImage.childImageSharp
+  const { fluid } = placeholderImage.childImageSharp
 
   return (
     <Container>
       <Title>{t("landing.title")}</Title>
-      <Image alt="That's me!" fixed={fixed} />
+      <StyledImage alt="That's me!" fluid={fluid} />
       <Description>{t("landing.description")}</Description>
       <Separator />
     </Container>

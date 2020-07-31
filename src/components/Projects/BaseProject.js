@@ -14,20 +14,23 @@ const StyledImg = styled(Img)`
 `
 
 const StyledCard = styled(Card)`
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 30%;
   margin: 48px 0px;
 
+  div:nth-child(2) {
+    flex-grow: 1;
+  }
+
   ${({ theme }) => `
+    @media(max-width: ${theme.breakpoints.values.lg}px) {
+      width: 40%;
+    }
     @media(max-width: ${theme.breakpoints.values.md}px) {
       width: 90%;
     }
   `};
-`
-
-const ButtonsContainer = styled.div`
-  position: absolute;
-  bottom: 8px;
 `
 
 const ComplexDescription = ({ descriptions = [] }) => {

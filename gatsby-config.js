@@ -18,7 +18,7 @@ module.exports = {
       "Open Source",
       "OSS",
     ],
-    image: "https://alexandre-lelain.dev/icons/icon-512x512.png",
+    image: "https://alexandre-lelain.dev/icons/favicon.png",
     google: process.env.GOOGLE || "",
   },
   plugins: [
@@ -58,6 +58,14 @@ module.exports = {
         background_color: `#404040`,
         theme_color: `#404040`,
         icon: `src/images/profile.png`,
+        icons: [
+          {
+            src: "/icons/favicon.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`,

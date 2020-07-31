@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Card } from "components-extra"
 
 import MyWebsite from "./MyWebsite"
 import ComponentsExtra from "./ComponentsExtra"
