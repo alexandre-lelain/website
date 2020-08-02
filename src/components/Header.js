@@ -1,9 +1,19 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Navbar } from "components-extra"
+import { makeStyles } from "@material-ui/core/styles"
 
 import Book from "icons/Book"
-import { useTranslations } from "hooks"
+import Dark from "icons/Dark"
+import Light from "icons/Light"
+
+import { useTranslations, useThemeMode, useIsDark } from "hooks"
+
+const useStyles = makeStyles({
+  icon: {
+    marginRight: 8,
+  },
+})
 
 const StyledMenu = styled(Navbar.Menu)`
   margin-left: 12px;
@@ -21,10 +31,22 @@ const StyledBrand = styled(Navbar.Brand)`
 const Header = () => {
   const { changeLocale, locale, t } = useTranslations("header")
   const [selectedLocale, setLocale] = useState(locale)
+  const [, setMode] = useThemeMode()
+  const isDark = useIsDark()
+  const classes = useStyles()
+
+  const iconProps = {
+    className: classes.icon,
+    "aria-label": t("menu.toggleMode"),
+  }
 
   const onChangeLanguage = (locale) => {
     setLocale(locale)
     changeLocale && changeLocale(locale)
+  }
+
+  const onChangeMode = () => {
+    setMode(isDark ? "light" : "dark")
   }
 
   return (
@@ -41,13 +63,10 @@ const Header = () => {
         </Navbar.LanguageItem>
       </Navbar.Language>
       <StyledMenu label="navigation-menu">
-        <Navbar.MenuItem href="#my-website">{t("menu.cv")}</Navbar.MenuItem>
-        <Navbar.MenuItem href="#nocode-nobug">{t("menu.code")}</Navbar.MenuItem>
-        <Navbar.MenuItem href="#components-extra">
-          {t("menu.ce")}
+        <Navbar.MenuItem onClick={onChangeMode}>
+          {isDark ? <Dark {...iconProps} /> : <Light {...iconProps} />}
+          {t("menu.theme")}
         </Navbar.MenuItem>
-        <Navbar.MenuItem href="#js-extra">{t("menu.je")}</Navbar.MenuItem>
-        <Navbar.MenuItem href="#top-shape">{t("menu.rest")}</Navbar.MenuItem>
         <Navbar.MenuItem href="#contact">{t("menu.contact")}</Navbar.MenuItem>
       </StyledMenu>
     </Navbar>

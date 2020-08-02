@@ -2,11 +2,8 @@ module.exports = {
   header: {
     title: "Alexandre Le Lain",
     menu: {
-      cv: "Mon CV",
-      code: "NoCode, NoBug",
-      ce: "Components-extra",
-      je: "Js-extra",
-      rest: "{...rest}",
+      theme: "Mode",
+      toggleMode: "Changer de thème",
       contact: "Contact",
     },
     en: "English",

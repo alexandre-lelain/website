@@ -38,17 +38,17 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Title = styled(Typography).attrs(() => ({
-  color: "primary",
+const Title = styled(Typography).attrs(({ theme: { palette } }) => ({
+  color: palette.type === "dark" ? "textPrimary" : "primary",
   variant: "h1",
   component: "h1",
 }))`
   margin-top: calc(10vh + 4vw);
-  font-size: 5em;
+  font-size: calc(32px + 4vh + 1vw);
   margin-bottom: 32px;
 `
-const Description = styled(Paragraph).attrs(() => ({
-  color: "primary",
+const Description = styled(Paragraph).attrs(({ theme: { palette } }) => ({
+  color: palette.type === "dark" ? "textPrimary" : "primary",
   variant: "h4",
   component: "h2",
 }))`

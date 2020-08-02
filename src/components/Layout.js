@@ -1,22 +1,35 @@
-import React from "react"
+import React, { useMemo } from "react"
 import styled from "styled-components"
 import { BackToTop, StyledProvider } from "components-extra"
 import { Container } from "@material-ui/core"
 
-import { TranslationsProvider } from "hooks"
-import { theme } from "styles"
+import { TranslationsProvider, ThemeModeProvider, useIsDark } from "hooks"
+import { lightTheme, darkTheme } from "styles"
 
 import Footer from "./Footer"
 import Header from "./Header"
 
 const StyledContainer = styled(Container)`
   padding-bottom: 128px;
-  background-color: aliceblue;
+  ${({ theme: { palette } }) => `
+    background-color: ${palette.backgrounds.page};
+  `}
 `
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
   return (
-    <StyledProvider theme={theme}>
+    <ThemeModeProvider>
+      <LayoutContent {...props} />
+    </ThemeModeProvider>
+  )
+}
+
+const LayoutContent = ({ children }) => {
+  const isDark = useIsDark()
+  const theme = useMemo(() => (isDark ? darkTheme : lightTheme), [isDark])
+
+  return (
+    <StyledProvider theme={theme} dark={isDark}>
       <TranslationsProvider>
         <>
           <Header />
