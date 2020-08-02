@@ -27,7 +27,7 @@ module.exports = {
     cv: {
       title: "Mon Web-CV",
       description:
-        "Mon web-cv fait avec ❤ avec React. Vous y trouverez toutes les informations concernant mon expérience, mon diplôme et mes passions.",
+        "Mon web-cv fait avec ❤ avec React. Vous y trouverez toutes les informations concernant mon job actuel, mon expérience, mon diplôme et mes passions.",
       controls: [
         {
           label: "En avant toute!",
@@ -58,7 +58,7 @@ module.exports = {
       title: "Components-extra",
       description: [
         `Une lib open-source de composants React.`,
-        `Basée sur le système de style de styled-components, et sur les standards de material-ui, elle sert à fournir à des développeurs un set de composants dits 'molécules' pour monter un site web rapidement et efficacement.`,
+        `Basée sur le système de style de styled-components, et sur les composants de material-ui, elle sert à fournir à des développeurs un set de composants dits 'molécules' pour monter un site web rapidement et efficacement.`,
         `La lib suit le pattern compound-components pour offrir une personnalisation optimale.`,
         `Ce site est justement construit avec cette lib! :)`,
       ],
@@ -120,7 +120,7 @@ module.exports = {
     agentWeb: {
       title: "Agent Web (alpha d'IDA)",
       description:
-        "Agent Web est un plugin JavaScript à destination des développeurs. C'est une petite IA très simple dont le but est d'améliorer l'UX des websites. Ce projet est actuellement en cours.",
+        "Agent Web est un plugin JavaScript à destination des développeurs. C'est une petite IA très simple dont le but est d'améliorer l'UX des websites. Débuté en 2017, le projet est pour l'instant en stand-by.",
       controls: [
         {
           label: "Essayer la démo",

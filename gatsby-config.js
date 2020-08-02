@@ -53,11 +53,11 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         display: `minimal-ui`,
-        name: `home`,
-        short_name: `home`,
+        name: `Alexandre Le Lain - Portfolio`,
+        short_name: `Alexandre Le Lain`,
         start_url: `/`,
-        background_color: `#404040`,
-        theme_color: `#404040`,
+        background_color: `#264d73`,
+        theme_color: `#264d73`,
         icon: `src/images/profile.png`,
         icons: [
           {
