@@ -26,8 +26,10 @@ module.exports = {
   projects: {
     cv: {
       title: "My Web-Resume",
-      description:
+      description: [
         "My web-resume made with ❤ with React. You will find everything about my current job, my past experience, my diploma and my hobbies there.",
+        "You will also find there my CV in PDF available in both french & english.",
+      ],
       controls: [
         {
           label: "Visit my web-resume",
@@ -106,8 +108,10 @@ module.exports = {
     },
     topShape: {
       title: "Top Shape",
-      description:
+      description: [
         "My first Android app. It offers some tools to calculate various body mass/shape indexes, and also offers a daily follow up, thus giving to the users the posibility to check their evolution each day.",
+        "It was developped more than 5 years ago, and is now outdated and quite ugly, but a revamp is planned in my backlog!",
+      ],
       controls: [
         {
           label: "Download link",

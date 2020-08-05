@@ -26,8 +26,10 @@ module.exports = {
   projects: {
     cv: {
       title: "Mon Web-CV",
-      description:
+      description: [
         "Mon web-cv fait avec ❤ avec React. Vous y trouverez toutes les informations concernant mon job actuel, mon expérience, mon diplôme et mes passions.",
+        "Vous pourrez aussi y trouver mon CV en format PDF, disponible en anglais et en français.",
+      ],
       controls: [
         {
           label: "En avant toute!",
@@ -107,8 +109,10 @@ module.exports = {
     },
     topShape: {
       title: "Top Shape",
-      description:
+      description: [
         "Ma première application Android. Elle offre tout un tas d'outils permettant aux utilisateurs de calculer divers indices corporels. Elle permet aussi d'avoir un suivi quotidien pour que les utilisateurs visualisent leur évolution en temps réél.",
+        "L'application a été développée il y'a plus de 5 ans, et est aujourd'hui dépassée et un peu moche. Un revamp est prévu dans mon backlog cependant!",
+      ],
       controls: [
         {
           label: "Lien GooglePlay",
