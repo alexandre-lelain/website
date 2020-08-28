@@ -9,6 +9,8 @@ import { useTranslations } from "hooks"
 
 const StyledImage = styled(Image)`
   width: 156px;
+  border: 2px white solid;
+  border-radius: 50%;
   ${({ theme }) => `
     @media(max-width: ${theme.breakpoints.values.md}px) {
       width: 108px;

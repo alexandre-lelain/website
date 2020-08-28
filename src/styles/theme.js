@@ -24,7 +24,7 @@ export const darkTheme = merge({}, baseTheme, {
   palette: {
     type: "dark",
     backgrounds: {
-      page: "#4d4d4d",
+      page: "#333333",
     },
   },
 })

@@ -2,8 +2,9 @@ import React, { useMemo } from "react"
 import styled from "styled-components"
 import { BackToTop, StyledProvider } from "components-extra"
 import { Container } from "@material-ui/core"
+import { ThemeModeProvider, useThemeMode } from "react-theme-mode"
 
-import { TranslationsProvider, ThemeModeProvider, useIsDark } from "hooks"
+import { TranslationsProvider } from "hooks"
 import { lightTheme, darkTheme } from "styles"
 
 import Footer from "./Footer"
@@ -18,14 +19,15 @@ const StyledContainer = styled(Container)`
 
 const Layout = (props) => {
   return (
-    <ThemeModeProvider>
+    <ThemeModeProvider defaultTheme="light" isSSR>
       <LayoutContent {...props} />
     </ThemeModeProvider>
   )
 }
 
 const LayoutContent = ({ children }) => {
-  const isDark = useIsDark()
+  const [mode] = useThemeMode()
+  const isDark = useMemo(() => mode === "dark", [mode])
   const theme = useMemo(() => (isDark ? darkTheme : lightTheme), [isDark])
 
   return (

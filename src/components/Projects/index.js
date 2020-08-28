@@ -9,6 +9,7 @@ import TopShape from "./TopShape"
 import AgentWeb from "./AgentWeb"
 import More from "./More"
 import NoCodeNoBug from "./NoCodeNoBug"
+import ReactThemeMode from "./ReactThemeMode"
 
 const Container = styled.div`
   margin-top: 42px;
@@ -24,6 +25,7 @@ export default () => (
     <NoCodeNoBug />
     <ComponentsExtra />
     <JsExtra />
+    <ReactThemeMode />
     <AvecVousDemain />
     <TopShape />
     <AgentWeb />

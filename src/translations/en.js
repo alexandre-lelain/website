@@ -92,6 +92,26 @@ module.exports = {
         },
       ],
     },
+    reactThemeMode: {
+      title: "React-theme-mode",
+      description: [
+        `Managing your theme mode has never been that simple.`,
+        `react-theme-mode comes with a React Hook that helps you manage your theme mode.`,
+        `Since it was built on top of React's Context, you can use it anywhere inside your React application. By default, it also saves into the localStorage the new theme value each time it changes,
+         so that it remains for the future visits of the users on your website.`,
+        `Fun fact: this website uses it to handle the light and dark theme 😉`,
+      ],
+      controls: [
+        {
+          label: "module npm",
+          link: "https://www.npmjs.com/package/react-theme-mode",
+        },
+        {
+          label: "Check the doc",
+          link: "https://react-theme-mode.netlify.app",
+        },
+      ],
+    },
     avecVousDemain: {
       title: "Avec Vous Demain",
       description: [

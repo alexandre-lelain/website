@@ -35,6 +35,7 @@ module.exports = {
           lodash: path.resolve(__dirname, "node_modules/lodash-es"),
           images: path.resolve(__dirname, "src/images"),
           utils: path.resolve(__dirname, "src/utils"),
+          react: path.resolve(__dirname, "node_modules/react"),
         },
       },
     },

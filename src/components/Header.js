@@ -2,12 +2,13 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Navbar } from "components-extra"
 import { makeStyles } from "@material-ui/core/styles"
+import { useThemeMode } from "react-theme-mode"
 
 import Book from "icons/Book"
 import Dark from "icons/Dark"
 import Light from "icons/Light"
 
-import { useTranslations, useThemeMode, useIsDark } from "hooks"
+import { useTranslations } from "hooks"
 
 const useStyles = makeStyles({
   icon: {
@@ -31,8 +32,8 @@ const StyledBrand = styled(Navbar.Brand)`
 const Header = () => {
   const { changeLocale, locale, t } = useTranslations("header")
   const [selectedLocale, setLocale] = useState(locale)
-  const [, setMode] = useThemeMode()
-  const isDark = useIsDark()
+  const [mode, setMode] = useThemeMode()
+  const isDark = React.useMemo(() => mode === "dark", [mode])
   const classes = useStyles()
 
   const iconProps = {
