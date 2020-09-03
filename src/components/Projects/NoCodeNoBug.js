@@ -24,7 +24,7 @@ export default () => {
     <BaseProject
       id="nocode-nobug"
       image={{ src: Media, fluid }}
-      prefix="projects.noCodeNoBug"
+      prefix="noCodeNoBug"
     />
   )
 }

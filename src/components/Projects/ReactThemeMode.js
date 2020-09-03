@@ -24,7 +24,7 @@ export default () => {
     <BaseProject
       id="react-theme-mode"
       image={{ src: Media, fluid }}
-      prefix="projects.reactThemeMode"
+      prefix="reactThemeMode"
     />
   )
 }

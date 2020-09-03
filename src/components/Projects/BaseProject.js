@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useCallback } from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Paragraph } from "components-extra"
@@ -12,9 +12,8 @@ import {
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import Img from "gatsby-image"
-import { last, get, map } from "lodash"
-
-import { useTranslations } from "hooks"
+import { last, map } from "lodash"
+import { Trans, useTranslation } from "react-i18next"
 
 const useStyles = makeStyles((theme) => ({
   media: {
@@ -62,19 +61,21 @@ const ComplexDescription = ({ descriptions = [] }) => {
           key={index}
           color="textSecondary"
         >
-          {description}
+          <Trans>{description}</Trans>
         </Paragraph>
       ))}
     </Fragment>
   )
 }
 
-const BaseProject = ({ image = {}, prefix = "", ...rest }) => {
-  const { t, wordings } = useTranslations(prefix)
-  const { src, fluid } = image
+const BaseProject = ({ image = {}, prefix, ...rest }) => {
+  const { t: i18nt } = useTranslation("projects")
+  const t = useCallback((key) => i18nt(`${prefix}.${key}`), [i18nt, prefix])
   const classes = useStyles()
-  const controls = get(wordings, prefix + ".controls", [])
 
+  const { src, fluid } = image
+  const control = t("controls")
+  const controls = Array.isArray(control) ? control : []
   const description = t("description")
   const descriptions = Array.isArray(description) ? description : [description]
 
@@ -118,7 +119,7 @@ ComplexDescription.propTypes = {
 
 BaseProject.propTypes = {
   image: PropTypes.object,
-  prefix: PropTypes.string,
+  prefix: PropTypes.string.isRequired,
 }
 
 export default BaseProject

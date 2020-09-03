@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import { Paragraph } from "components-extra"
+import { useTranslation } from "react-i18next"
 
-import MyWebsite from "./MyWebsite"
 import ComponentsExtra from "./ComponentsExtra"
 import JsExtra from "./JsExtra"
 import AvecVousDemain from "./AvecVousDemain"
@@ -19,16 +20,33 @@ const Container = styled.div`
   justify-content: space-evenly;
 `
 
-export default () => (
-  <Container>
-    <MyWebsite />
-    <NoCodeNoBug />
-    <ComponentsExtra />
-    <JsExtra />
-    <ReactThemeMode />
-    <AvecVousDemain />
-    <TopShape />
-    <AgentWeb />
-    <More />
-  </Container>
-)
+const Caption = styled(Paragraph).attrs(() => ({
+  color: "primary",
+  variant: "h4",
+  component: "h2",
+}))`
+  margin: 4px auto;
+  text-align: center;
+`
+
+const Projects = () => {
+  const { t } = useTranslation("projects")
+
+  return (
+    <>
+      <Caption>{t("caption")}</Caption>
+      <Container>
+        <NoCodeNoBug />
+        <ComponentsExtra />
+        <JsExtra />
+        <ReactThemeMode />
+        <AvecVousDemain />
+        <TopShape />
+        <AgentWeb />
+        <More />
+      </Container>
+    </>
+  )
+}
+
+export default Projects

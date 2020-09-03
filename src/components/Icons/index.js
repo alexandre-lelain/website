@@ -1,0 +1,5 @@
+export { default as Book } from "./Book"
+export { default as Github } from "./Github"
+export { default as LinkedIn } from "./LinkedIn"
+export { default as Mail } from "./Mail"
+export { default as Twitter } from "./Twitter"

@@ -20,7 +20,5 @@ export default () => {
   )
   const { fluid } = placeholderImage.childImageSharp
 
-  return (
-    <BaseProject image={{ src: Media, fluid }} prefix="projects.agentWeb" />
-  )
+  return <BaseProject image={{ src: Media, fluid }} prefix="agentWeb" />
 }

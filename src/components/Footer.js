@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Footer } from "components-extra"
 import { Typography } from "@material-ui/core"
+import { useTranslation } from "react-i18next"
 
-import { useTranslations } from "hooks"
 import Github from "icons/Github"
 import LinkedIn from "icons/LinkedIn"
 import Mail from "icons/Mail"
@@ -18,8 +18,8 @@ const BottomBannerText = styled(Typography).attrs(() => ({
 `
 
 const BottomBanner = () => {
-  const { t } = useTranslations()
-  return <BottomBannerText>{t("footer.bottom")}</BottomBannerText>
+  const { t } = useTranslation("footer")
+  return <BottomBannerText>{t("bottom")}</BottomBannerText>
 }
 
 const Item = styled(Typography)`
@@ -31,30 +31,30 @@ const StyledFooter = styled(Footer)`
 `
 
 export default () => {
-  const { t } = useTranslations()
+  const { t } = useTranslation("footer")
 
   return (
     <StyledFooter
       id="contact"
-      title={t("footer.title")}
+      title={t("title")}
       bottomBanner={<BottomBanner />}
     >
       <Footer.Column isInline>
         <Footer.Item href="mailto:lelain.alexandre@gmail.com">
           <Mail />
-          <Item>{t("footer.mail")}</Item>
+          <Item>{t("mail")}</Item>
         </Footer.Item>
         <Footer.Item href="https://github.com/alexandre-lelain">
           <Github />
-          <Item>{t("footer.github")}</Item>
+          <Item>{t("github")}</Item>
         </Footer.Item>
         <Footer.Item href="https://twitter.com/a_lelain">
           <Twitter />
-          <Item>{t("footer.twitter")}</Item>
+          <Item>{t("twitter")}</Item>
         </Footer.Item>
         <Footer.Item href="https://www.linkedin.com/in/alexandre-lelain">
           <LinkedIn />
-          <Item>{t("footer.linkedin")}</Item>
+          <Item>{t("linkedin")}</Item>
         </Footer.Item>
       </Footer.Column>
     </StyledFooter>

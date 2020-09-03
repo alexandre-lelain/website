@@ -1,16 +1,17 @@
 import React from "react"
 
 import Landing from "components/Landing"
-import Layout from "components/Layout"
 import Projects from "components/Projects"
+import About from "components/About"
 import SEO from "components/Seo"
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO />
     <Landing />
+    <About />
     <Projects />
-  </Layout>
+  </>
 )
 
 export default IndexPage

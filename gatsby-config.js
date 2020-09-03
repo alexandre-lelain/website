@@ -10,6 +10,10 @@ module.exports = {
     author: `@a_lelain`,
     url: "https://alexandre-lelain.dev/",
     siteUrl: "https://alexandre-lelain.dev/",
+    github: "https://github.com/alexandre-lelain",
+    twitter: "https://mobile.twitter.com/a_lelain",
+    linkedIn: "https://www.linkedin.com/in/alexandre-lelain",
+    mail: "mailto:lelain.alexandre@gmail.com",
     keywords: [
       "Alexandre Le Lain",
       "Website",
@@ -30,11 +34,10 @@ module.exports = {
           components: path.resolve(__dirname, "src/components"),
           styles: path.resolve(__dirname, "src/styles"),
           icons: path.resolve(__dirname, "src/components/Icons"),
-          hooks: path.resolve(__dirname, "src/hooks"),
-          translations: path.resolve(__dirname, "src/translations"),
           lodash: path.resolve(__dirname, "node_modules/lodash-es"),
           images: path.resolve(__dirname, "src/images"),
           utils: path.resolve(__dirname, "src/utils"),
+          locales: path.resolve(__dirname, "src/locales"),
           react: path.resolve(__dirname, "node_modules/react"),
         },
       },
@@ -44,6 +47,12 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: path.resolve(`./src/components/Layout.js`),
       },
     },
     `gatsby-transformer-sharp`,

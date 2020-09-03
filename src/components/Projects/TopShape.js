@@ -24,7 +24,7 @@ export default () => {
     <BaseProject
       id="top-shape"
       image={{ src: Media, fluid }}
-      prefix="projects.topShape"
+      prefix="topShape"
     />
   )
 }

@@ -1,18 +1,10 @@
 module.exports = {
-  header: {
-    title: "Alexandre Le Lain",
-    menu: {
-      theme: "Mode",
-      toggleMode: "Changer de thème",
-      contact: "Contact",
-    },
-    en: "English",
-    fr: "Français",
-  },
   landing: {
-    title: "Bienvenue.",
-    description:
-      "Découvrez mes projets réalisés avec passion. Et aussi avec beaucoup de café.",
+    title: "Alexandre Le Lain",
+    subtitle: "Ingénieur Web",
+    caption1: "Bienvenue.",
+    caption2:
+      "Ce site web est un condensé d'informations sur mon profil et mes projets. Si vous souhaitez en savoir davantage, je vous souhaite une bonne visite.",
   },
   footer: {
     title: "Me contacter",
@@ -23,7 +15,20 @@ module.exports = {
     github: "alexandre-lelain",
     linkedin: "alexandre-lelain",
   },
+  about: {
+    left: {
+      title: "Mon Profil",
+      part1: `Je suis un ingénieur études et développement, et je travaille actuellement <strong>@Attineos</strong> en tant qu'ingénieur spécialisé en Front-End. J'ai obtenu mon diplôme
+        d'ingénieur à l'INSA Rouen-Normandie dans le département <strong>Architecture des Systèmes d'Information</strong>.`,
+    },
+    right: {
+      title: "Mes Passions",
+    },
+  },
   projects: {
+    title: "Mes Projets",
+    caption:
+      "Découvrez mes projets réalisés avec passion. Et aussi avec beaucoup de café.",
     cv: {
       title: "Mon Web-CV",
       description: [
@@ -100,7 +105,7 @@ module.exports = {
         `react-theme-mode propose un React Hook permettant de gérer en lecture et écriture le mode de votre thème.`,
         `En plus de vous fournir un hook tout fait, vous pouvez gérer le mode depuis n'importe quel niveau de votre application React, et lorsque vos utilisateurs
         changent le mode du thème, celui-ci est autmatiquement sauvegardé dans leur localStorage, pour les futures visites de votre site.`,
-        `Fun fact: ce site utilise cette librairie pour gérer le mode dark & light 😉`,
+        `<strong>Fun fact</strong>: ce site utilise cette librairie pour gérer le mode dark & light 😉`,
       ],
       controls: [
         {

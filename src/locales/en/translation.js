@@ -1,18 +1,10 @@
 module.exports = {
-  header: {
-    title: "Alexandre Le Lain",
-    menu: {
-      theme: "Mode",
-      toggleMode: "Switch to dark or light theme",
-      contact: "Contact",
-    },
-    en: "English",
-    fr: "Français",
-  },
   landing: {
-    title: "Welcome home.",
-    description:
-      "Discover my projects made with passion. And with lots of coffee.",
+    title: "Alexandre Le Lain",
+    subtitle: "Web Engineer",
+    caption1: "Welcome.",
+    caption2:
+      "This website contains much information about my profile and my projects. If you want to know more about me and my work, I wish you a good time visiting my website.",
   },
   footer: {
     title: "Let's stay in touch!",
@@ -23,7 +15,18 @@ module.exports = {
     github: "alexandre-lelain",
     linkedin: "alexandre-lelain",
   },
+  about: {
+    left: {
+      title: "About me",
+      part1: `I am a Software Engineer currently working <strong>@Attineos</strong> as a Front-End Engineer. I graduated at INSA Rouen, in the <strong>Systems Architecture Information department</strong>.`,
+    },
+    right: {
+      title: "What thrills me",
+    },
+  },
   projects: {
+    title: "Projects",
+    caption: "Discover my projects made with passion. And with lots of coffee.",
     cv: {
       title: "My Web-Resume",
       description: [
@@ -61,7 +64,7 @@ module.exports = {
         `An open-source lib made of React components.`,
         `Based on styled-components' styling system and material-ui, it aims to provide web developers with a set of customizable molecule components to build web apps fast and effectively.`,
         `The lib follow the compound-components pattern to offer the best customization possible for the developers.`,
-        `Fun fact: this website was built with this lib! :)`,
+        `<strong>Fun fact</strong>: this website was built with this lib! :)`,
       ],
       controls: [
         {

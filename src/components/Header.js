@@ -1,20 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Navbar } from "components-extra"
-import { makeStyles } from "@material-ui/core/styles"
-import { useThemeMode } from "react-theme-mode"
+import { useTranslation } from "react-i18next"
 
+import { getPreferedLocale, setPreferedLocale } from "utils"
 import Book from "icons/Book"
-import Dark from "icons/Dark"
-import Light from "icons/Light"
-
-import { useTranslations } from "hooks"
-
-const useStyles = makeStyles({
-  icon: {
-    marginRight: 8,
-  },
-})
 
 const StyledMenu = styled(Navbar.Menu)`
   margin-left: 12px;
@@ -30,32 +20,20 @@ const StyledBrand = styled(Navbar.Brand)`
 `
 
 const Header = () => {
-  const { changeLocale, locale, t } = useTranslations("header")
-  const [selectedLocale, setLocale] = useState(locale)
-  const [mode, setMode] = useThemeMode()
-  const isDark = React.useMemo(() => mode === "dark", [mode])
-  const classes = useStyles()
-
-  const iconProps = {
-    className: classes.icon,
-    "aria-label": t("menu.toggleMode"),
-  }
+  const { t, i18n } = useTranslation("header")
+  const selectedLanguage = i18n.language || getPreferedLocale()
 
   const onChangeLanguage = (locale) => {
-    setLocale(locale)
-    changeLocale && changeLocale(locale)
-  }
-
-  const onChangeMode = () => {
-    setMode(isDark ? "light" : "dark")
+    i18n.changeLanguage(locale)
+    setPreferedLocale(locale)
   }
 
   return (
-    <Navbar position="relative">
+    <Navbar position="sticky">
       <StyledBrand title={t("title")}>
         <Book />
       </StyledBrand>
-      <Navbar.Language selectedLanguage={t(`${selectedLocale}`)}>
+      <Navbar.Language selectedLanguage={t(selectedLanguage)}>
         <Navbar.LanguageItem onClick={() => onChangeLanguage("en")}>
           {t("en")}
         </Navbar.LanguageItem>
@@ -64,10 +42,12 @@ const Header = () => {
         </Navbar.LanguageItem>
       </Navbar.Language>
       <StyledMenu label="navigation-menu">
-        <Navbar.MenuItem onClick={onChangeMode}>
-          {isDark ? <Dark {...iconProps} /> : <Light {...iconProps} />}
-          {t("menu.theme")}
+        <Navbar.MenuItem href="#about">{t("menu.about")}</Navbar.MenuItem>
+        <Navbar.MenuItem href="#experiences">
+          {t("menu.experiences")}
         </Navbar.MenuItem>
+        <Navbar.MenuItem href="#projects">{t("menu.projects")}</Navbar.MenuItem>
+        <Navbar.MenuItem href="#skills">{t("menu.skills")}</Navbar.MenuItem>
         <Navbar.MenuItem href="#contact">{t("menu.contact")}</Navbar.MenuItem>
       </StyledMenu>
     </Navbar>

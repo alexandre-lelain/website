@@ -1,78 +1,115 @@
 import React from "react"
 import styled from "styled-components"
-import { Paragraph } from "components-extra"
-import { Typography } from "@material-ui/core"
+import { IconButton, Typography } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
+import PropTypes from "prop-types"
+import { useTranslation } from "react-i18next"
 
-import { useTranslations } from "hooks"
+import { Mail, Github, Twitter, LinkedIn } from "icons"
 
-const StyledImage = styled(Image)`
-  width: 156px;
-  border: 2px white solid;
-  border-radius: 50%;
-  ${({ theme }) => `
-    @media(max-width: ${theme.breakpoints.values.md}px) {
-      width: 108px;
-    }
-  `};
-`
+import Profile from "./Profile"
+import Separator from "./Separator"
+import Section from "./Section"
 
 const query = graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "profile.webp" }) {
-      childImageSharp {
-        fluid(webpQuality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+    site {
+      siteMetadata {
+        github
+        linkedIn
+        twitter
+        mail
       }
     }
   }
 `
 
-const Container = styled.div`
-  height: 100%;
+const Container = styled(Section)`
+  min-height: 100vh;
+  ${({
+    theme: {
+      palette: { text },
+    },
+  }) => `
+    color: ${text.primary};
+  `}
+`
+
+const Title = styled(Typography)`
+  font-size: calc(16px + 2vh + 1vw);
+  font-weight: bold;
+  margin: 8px 0px;
+`
+
+const Subtitle = styled(Typography)`
+  font-size: calc(12px + 1vh + 0.5vw);
+  font-weight: bold;
+  margin-bottom: 16px;
+`
+
+const Caption = styled(Typography)`
+  font-size: calc(12px + 0.5vh + 0.25vw);
+  max-width: 800px;
+  margin: 8px 0px;
+`
+
+const IconsContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  word-break: break-word;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 8px;
+  ${({ theme: { breakpoints } }) => `
+    margin-bottom: 64px;
+    ${breakpoints.down("md")} {
+      margin-bottom: 24px;
+    }
+  `}
 `
 
-const Title = styled(Typography).attrs(({ theme: { palette } }) => ({
-  color: palette.type === "dark" ? "textPrimary" : "primary",
-  variant: "h1",
-  component: "h1",
-}))`
-  margin-top: calc(10vh + 4vw);
-  font-size: calc(32px + 4vh + 1vw);
-  margin-bottom: 32px;
-`
-const Description = styled(Paragraph).attrs(({ theme: { palette } }) => ({
-  color: palette.type === "dark" ? "textPrimary" : "primary",
-  variant: "h4",
-  component: "h2",
-}))`
-  margin: 48px 0px;
-`
+const IconItem = ({ title, children, ...rest }) => (
+  <IconButton
+    aria-label={title}
+    color="primary"
+    target="_blank"
+    rel="noopener noreferrer"
+    {...rest}
+  >
+    {children}
+  </IconButton>
+)
 
-const Separator = styled.hr`
-  width: 60%;
-  margin: 24px 0px 0px 0px;
-`
-
-export default () => {
-  const { placeholderImage } = useStaticQuery(query)
-  const { t } = useTranslations()
-  const { fluid } = placeholderImage.childImageSharp
+const Landing = () => {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(query)
+  const { t } = useTranslation("landing")
 
   return (
-    <Container>
-      <Title>{t("landing.title")}</Title>
-      <StyledImage alt="That's me!" fluid={fluid} />
-      <Description>{t("landing.description")}</Description>
+    <Container id="landing" maxWidth={false}>
+      <Profile />
+      <Title component="h1">{t("title")}</Title>
+      <Subtitle component="h2">{t("subtitle")}</Subtitle>
       <Separator />
+      <IconsContainer>
+        <IconItem title="Github" href={siteMetadata.github}>
+          <Github />
+        </IconItem>
+        <IconItem title="Twitter" href={siteMetadata.twitter}>
+          <Twitter />
+        </IconItem>
+        <IconItem title="LinkedIn" href={siteMetadata.linkedIn}>
+          <LinkedIn />
+        </IconItem>
+        <IconItem title="Mail" href={siteMetadata.mail}>
+          <Mail />
+        </IconItem>
+      </IconsContainer>
+      <Caption>{t("caption1")}</Caption>
+      <Caption>{t("caption2")}</Caption>
     </Container>
   )
 }
+
+IconItem.propTypes = {
+  title: PropTypes.string,
+}
+
+export default Landing
