@@ -12,6 +12,7 @@ const theme = {
     backgrounds: {
       landing: "#e6ecff",
       about: "#333",
+      projects: "#e6ecff",
     },
   },
 }

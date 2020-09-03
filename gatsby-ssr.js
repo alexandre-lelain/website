@@ -3,6 +3,6 @@ export const onRenderBody = ({ setBodyAttributes, setHtmlAttributes }) => {
     style: { margin: "0" },
   })
   setHtmlAttributes({
-    style: { margin: "0" },
+    style: { margin: "0", scrollBehavior: "smooth", scrollPaddingTop: "64px" },
   })
 }

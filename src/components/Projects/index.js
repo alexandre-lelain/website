@@ -12,6 +12,9 @@ import More from "./More"
 import NoCodeNoBug from "./NoCodeNoBug"
 import ReactThemeMode from "./ReactThemeMode"
 
+import Section from "../Section"
+import Title from "../Title"
+
 const Container = styled.div`
   margin-top: 42px;
   display: flex;
@@ -25,7 +28,8 @@ const Caption = styled(Paragraph).attrs(() => ({
   variant: "h4",
   component: "h2",
 }))`
-  margin: 4px auto;
+  margin-top: 16px;
+  font-size: calc(12px + 1vh + 0.5vw);
   text-align: center;
 `
 
@@ -33,7 +37,8 @@ const Projects = () => {
   const { t } = useTranslation("projects")
 
   return (
-    <>
+    <Section id="projects">
+      <Title>{t("title")}</Title>
       <Caption>{t("caption")}</Caption>
       <Container>
         <NoCodeNoBug />
@@ -45,7 +50,7 @@ const Projects = () => {
         <AgentWeb />
         <More />
       </Container>
-    </>
+    </Section>
   )
 }
 

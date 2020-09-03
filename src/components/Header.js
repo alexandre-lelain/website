@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Navbar } from "components-extra"
 import { useTranslation } from "react-i18next"
+import { Link } from "gatsby"
 
 import { getPreferedLocale, setPreferedLocale } from "utils"
 import Book from "icons/Book"
@@ -42,13 +43,24 @@ const Header = () => {
         </Navbar.LanguageItem>
       </Navbar.Language>
       <StyledMenu label="navigation-menu">
-        <Navbar.MenuItem href="#about">{t("menu.about")}</Navbar.MenuItem>
-        <Navbar.MenuItem href="#experiences">
+        <Navbar.MenuItem component={Link} to="#landing">
+          {t("menu.welcome")}
+        </Navbar.MenuItem>
+        <Navbar.MenuItem component={Link} to="#about">
+          {t("menu.about")}
+        </Navbar.MenuItem>
+        <Navbar.MenuItem component={Link} to="#experiences">
           {t("menu.experiences")}
         </Navbar.MenuItem>
-        <Navbar.MenuItem href="#projects">{t("menu.projects")}</Navbar.MenuItem>
-        <Navbar.MenuItem href="#skills">{t("menu.skills")}</Navbar.MenuItem>
-        <Navbar.MenuItem href="#contact">{t("menu.contact")}</Navbar.MenuItem>
+        <Navbar.MenuItem component={Link} to="#projects">
+          {t("menu.projects")}
+        </Navbar.MenuItem>
+        <Navbar.MenuItem component={Link} to="#skills">
+          {t("menu.skills")}
+        </Navbar.MenuItem>
+        <Navbar.MenuItem component={Link} to="#contact">
+          {t("menu.contact")}
+        </Navbar.MenuItem>
       </StyledMenu>
     </Navbar>
   )

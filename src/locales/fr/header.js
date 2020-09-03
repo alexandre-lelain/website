@@ -1,6 +1,7 @@
 export default {
   title: "Alexandre Le Lain",
   menu: {
+    welcome: "Bienvenue",
     about: "Profil",
     experiences: "Expériences",
     projects: "Projets",

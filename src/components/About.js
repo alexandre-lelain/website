@@ -12,10 +12,6 @@ const Container = styled.div`
   justify-content: space-evenly;
   width: 100%;
   flex-wrap: wrap;
-
-  hr {
-    width: 40%;
-  }
 `
 
 const Part = styled.div`

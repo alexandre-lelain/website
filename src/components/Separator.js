@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Separator = styled.hr`
-  width: 30%;
+  width: 400px;
   margin: 0 auto;
   ${({
     theme: {
@@ -9,9 +9,10 @@ const Separator = styled.hr`
       palette: { primary },
     },
   }) => `
-    color: ${primary.light};
+    border: none;
+    border-bottom: solid 1px ${primary.light};
     ${breakpoints.down("sm")} {
-      width: 60%;
+      width: 200px;
     }
   `}
 `

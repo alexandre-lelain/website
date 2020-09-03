@@ -9,8 +9,8 @@ const StyledContainer = styled(Container)`
   text-align: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 32px;
-  padding-top: 32px;
+  padding-bottom: 48px;
+  padding-top: 48px;
   ${({
     id,
     theme: {
