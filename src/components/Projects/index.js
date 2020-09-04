@@ -24,7 +24,6 @@ const Container = styled.div`
 `
 
 const Caption = styled(Paragraph).attrs(() => ({
-  color: "primary",
   variant: "h4",
   component: "h2",
 }))`

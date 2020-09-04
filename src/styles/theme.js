@@ -19,6 +19,7 @@ const theme = {
       landing: "#e6ecff",
       about: "#333",
       projects: "#e6ecff",
+      experiences: "#e6e6e6",
     },
   },
 }

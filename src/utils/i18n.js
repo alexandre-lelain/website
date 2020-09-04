@@ -14,6 +14,7 @@ export const initializeTranslations = () => {
     },
     fallbackLng: DEFAULT_LOCALE,
     returnObjects: true,
+    keySeparation: ".",
     interpolation: {
       escapeValue: false,
     },

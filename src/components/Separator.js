@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Separator = styled.hr`
-  width: 400px;
+  min-width: 400px;
   margin: 0 auto;
   ${({
     theme: {
@@ -12,7 +12,7 @@ const Separator = styled.hr`
     border: none;
     border-bottom: solid 1px ${primary.light};
     ${breakpoints.down("sm")} {
-      width: 200px;
+      min-width: 200px;
     }
   `}
 `

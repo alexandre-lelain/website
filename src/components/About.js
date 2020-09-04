@@ -9,6 +9,13 @@ import { Cloud, Code, Download, Nature } from "icons"
 import Section from "./Section"
 import Title from "./Title"
 
+const StyledParagraph = styled(Paragraph)`
+  margin-bottom: 48px;
+  ${({ theme: { palette } }) => `
+    color: ${palette.secondary.dark};
+  `}
+`
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,9 +23,6 @@ const Container = styled.div`
   ${({ theme: { palette } }) => `
     ${Title} {
       color: ${palette.secondary.main};
-    }
-    ${Paragraph} {
-      color: ${palette.secondary.dark};
     }
   `}
 `
@@ -31,12 +35,9 @@ const Part = styled.div`
   &:not(:last-child) {
     margin-bottom: 64px;
   }
-  ${Paragraph} {
-    margin-bottom: 48px;
-  }
 `
 
-const PassionItem = styled.div`
+const PassionItem = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,15 +56,15 @@ const Profile = () => {
   return (
     <Part>
       <Title>{t("left.title")}</Title>
-      <Paragraph>
+      <StyledParagraph>
         <Trans>{t("left.part1")}</Trans>
-      </Paragraph>
-      <Paragraph>
+      </StyledParagraph>
+      <StyledParagraph>
         <Trans>{t("left.part2")}</Trans>
-      </Paragraph>
-      <Paragraph>
+      </StyledParagraph>
+      <StyledParagraph>
         <Trans>{t("left.resume")}</Trans>
-      </Paragraph>
+      </StyledParagraph>
       <Button
         href={t("left.resumeLink")}
         startIcon={<Download />}
@@ -85,27 +86,27 @@ const Passions = () => {
   return (
     <Part>
       <Title>{t("right.title")}</Title>
-      <Paragraph>
+      <StyledParagraph>
         <PassionItem>
           <Cloud />
           <Trans>{t("right.web.title")}</Trans>
         </PassionItem>
         <Trans>{t("right.web.content")}</Trans>
-      </Paragraph>
-      <Paragraph>
+      </StyledParagraph>
+      <StyledParagraph>
         <PassionItem>
           <Code />
           <Trans>{t("right.code.title")}</Trans>
         </PassionItem>
         <Trans>{t("right.code.content")}</Trans>
-      </Paragraph>
-      <Paragraph>
+      </StyledParagraph>
+      <StyledParagraph>
         <PassionItem>
           <Nature />
           <Trans>{t("right.nature.title")}</Trans>
         </PassionItem>
         <Trans>{t("right.nature.content")}</Trans>
-      </Paragraph>
+      </StyledParagraph>
     </Part>
   )
 }
