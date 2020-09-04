@@ -1,4 +1,9 @@
 const theme = {
+  typography: {
+    paragraph: {
+      maxWidth: 750,
+    },
+  },
   palette: {
     text: {
       primary: "#404040",
@@ -8,6 +13,7 @@ const theme = {
     },
     secondary: {
       main: "#f2f2f2",
+      dark: "#cccccc",
     },
     backgrounds: {
       landing: "#e6ecff",

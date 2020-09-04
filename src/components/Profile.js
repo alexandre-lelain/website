@@ -17,7 +17,7 @@ const query = graphql`
 const StyledImage = styled(Image)`
   margin-top: calc(6vh + 2vw);
   width: 156px;
-  border: 2px white solid;
+  border: 3px white solid;
   border-radius: 50%;
   ${({ theme }) => `
     @media(max-width: ${theme.breakpoints.values.md}px) {

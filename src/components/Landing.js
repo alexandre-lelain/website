@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { IconButton, Typography } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import { useTranslation } from "react-i18next"
+import { useTranslation, Trans } from "react-i18next"
 
 import { Mail, Github, Twitter, LinkedIn } from "icons"
 
@@ -102,7 +102,9 @@ const Landing = () => {
           <Mail />
         </IconItem>
       </IconsContainer>
-      <Caption>{t("caption1")}</Caption>
+      <Caption>
+        <Trans>{t("caption1")}</Trans>
+      </Caption>
       <Caption>{t("caption2")}</Caption>
     </Container>
   )

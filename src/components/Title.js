@@ -5,7 +5,8 @@ import { Typography } from "@material-ui/core"
 import Separator from "./Separator"
 
 const Container = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 48px;
+  margin-top: 32px;
 `
 
 const StyledTitle = styled(Typography)`
