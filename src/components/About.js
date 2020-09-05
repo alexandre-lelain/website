@@ -31,7 +31,7 @@ const Part = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: justify;
+  text-align: left;
   &:not(:last-child) {
     margin-bottom: 64px;
   }

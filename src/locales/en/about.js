@@ -17,7 +17,7 @@ export default {
       title: "<strong>Web</strong>",
       content: `It fascinates me. It's truely amazing to see how easy it is today to have access to an almost infinite source of knowledge. How easy it is to
         use a service simply by opening the browser and reaching its url. The web connects, and impacts the whole world. With the upcoming PWA apps, our web applications are now also
-        mobile-friendly, and promote the following motto - one application for <strong>any</strong> support. This is why I am convinced tomorrow's stakes are in the Web. Furthermore, I really enjoy the challenges that
+        mobile-friendly, and promote the following motto - one application for <strong>any</strong> support.<br/><br/> This is why I am convinced tomorrow's stakes are in the Web. Furthermore, I really enjoy the challenges that
         come around it - create <strong>fast</strong> and <strong>robust</strong> FrontEnds, <strong>optimize</strong>, and <strong>automate</strong> delivery, tests and integration are what keeps me up at night!
       `,
     },

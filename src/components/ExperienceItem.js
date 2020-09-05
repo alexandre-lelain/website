@@ -1,9 +1,9 @@
-import React, { useCallback } from "react"
+import React, { useCallback, Fragment } from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Trans, useTranslation } from "react-i18next"
 import { Paragraph } from "components-extra"
-import { Chip, Paper, Typography } from "@material-ui/core"
+import { Chip, Hidden as MuiHidden, Paper, Typography } from "@material-ui/core"
 import { map } from "lodash"
 import {
   TimelineConnector,
@@ -65,12 +65,24 @@ const Company = styled(Typography)`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8px;
 `
 
 const Description = styled.div`
-  margin: 16px 0px;
-  text-align: justify;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  text-align: left;
 `
+
+const StyledTimelineOppositeContent = styled(TimelineOppositeContent)`
+  ${({ theme: { breakpoints } }) => `
+    ${breakpoints.down("sm")} {
+      display: none;
+    }
+  `}
+`
+
+const Hidden = (props) => <MuiHidden implementation="css" {...props} />
 
 const Tags = ({ tags = [] }) => {
   return (
@@ -82,6 +94,13 @@ const Tags = ({ tags = [] }) => {
   )
 }
 
+const Time = ({ t }) => (
+  <Fragment>
+    <DateLabel color="textSecondary">{t("date")}</DateLabel>
+    <Paragraph color="textSecondary">{t("duration")}</Paragraph>
+  </Fragment>
+)
+
 const ExperienceItem = ({ name }) => {
   const { t: i18nt } = useTranslation("experiences")
   const t = useCallback((key) => i18nt(`items.${name}.${key}`), [i18nt])
@@ -90,10 +109,11 @@ const ExperienceItem = ({ name }) => {
 
   return (
     <TimelineItem>
-      <TimelineOppositeContent>
-        <DateLabel color="textSecondary">{t("date")}</DateLabel>
-        <Paragraph color="textSecondary">{t("duration")}</Paragraph>
-      </TimelineOppositeContent>
+      <StyledTimelineOppositeContent>
+        <Hidden smDown>
+          <Time t={t} />
+        </Hidden>
+      </StyledTimelineOppositeContent>
       <TimelineSeparator>
         <StyledDot color={type === "web" ? "primary" : "secondary"}>
           <Icon />
@@ -109,6 +129,9 @@ const ExperienceItem = ({ name }) => {
             <Location />
             {t("company")}
           </Company>
+          <Hidden mdUp>
+            <Time t={t} />
+          </Hidden>
           <Description>
             <Typography>
               <Trans>{t("description")}</Trans>
@@ -119,6 +142,10 @@ const ExperienceItem = ({ name }) => {
       </TimelineContent>
     </TimelineItem>
   )
+}
+
+Time.propTypes = {
+  t: PropTypes.func,
 }
 
 Tags.propTypes = {

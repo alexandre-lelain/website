@@ -18,7 +18,7 @@ export default {
         "Python",
       ],
       description: `
-        Development and optimization of a heavy emailing plateform: Mailjet.
+        Development and optimization of a heavy emailing platform: Mailjet.
       `,
     },
     insa: {

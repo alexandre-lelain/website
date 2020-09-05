@@ -4,6 +4,7 @@ import footer from "./footer"
 import header from "./header"
 import landing from "./landing"
 import projects from "./projects"
+import skills from "./skills"
 import translation from "./translation"
 
 export default {
@@ -13,5 +14,6 @@ export default {
   header,
   landing,
   projects,
+  skills,
   ...translation,
 }

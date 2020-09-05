@@ -30,6 +30,9 @@ const Caption = styled(Paragraph).attrs(() => ({
   margin-top: 16px;
   font-size: calc(12px + 1vh + 0.5vw);
   text-align: center;
+  ${({ theme: { palette } }) => `
+    color: ${palette.secondary.dark};
+  `}
 `
 
 const Projects = () => {
@@ -37,7 +40,7 @@ const Projects = () => {
 
   return (
     <Section id="projects">
-      <Title>{t("title")}</Title>
+      <Title color="secondary">{t("title")}</Title>
       <Caption>{t("caption")}</Caption>
       <Container>
         <NoCodeNoBug />

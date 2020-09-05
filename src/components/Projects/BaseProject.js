@@ -8,7 +8,6 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Typography,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import Img from "gatsby-image"
@@ -37,18 +36,21 @@ const StyledImg = styled(Img)`
 
 const StyledCard = styled(Card)`
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  width: 30%;
-  margin: 48px 0px;
+  max-width: 400px;
+  margin: 48px 16px;
 
   ${({ theme }) => `
-    @media(max-width: ${theme.breakpoints.values.lg}px) {
-      width: 40%;
-    }
-    @media(max-width: ${theme.breakpoints.values.md}px) {
+    @media(max-width: ${theme.breakpoints.values.sm}px) {
       width: 90%;
     }
   `};
+`
+
+const Title = styled(Paragraph)`
+  font-weight: bold;
+  margin-bottom: 24px;
 `
 
 const ComplexDescription = ({ descriptions = [] }) => {
@@ -88,9 +90,9 @@ const BaseProject = ({ image = {}, prefix, ...rest }) => {
         src={src}
       />
       <CardContent className={classes.content}>
-        <Typography gutterBottom variant="h4" component="h3">
+        <Title variant="h5" component="h3">
           {t("title")}
-        </Typography>
+        </Title>
         <ComplexDescription descriptions={descriptions} />
       </CardContent>
       <CardActions>
