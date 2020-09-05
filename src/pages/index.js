@@ -6,15 +6,20 @@ import Landing from "components/Landing"
 import Projects from "components/Projects"
 import SEO from "components/Seo"
 import Skills from "components/Skills"
+import Header from "components/Header"
+import Footer from "components/Footer"
 
 const IndexPage = () => (
   <>
     <SEO />
-    <Landing />
-    <About />
-    <Experiences />
-    <Projects />
-    <Skills />
+    <main>
+      <Landing />
+      <About />
+      <Experiences />
+      <Projects />
+      <Skills />
+    </main>
+    <Footer />
   </>
 )
 

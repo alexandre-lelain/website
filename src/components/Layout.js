@@ -4,7 +4,6 @@ import { BackToTop, StyledProvider } from "components-extra"
 import { initializeTranslations } from "utils"
 import { theme } from "styles"
 
-import Footer from "./Footer"
 import Header from "./Header"
 
 initializeTranslations()
@@ -12,12 +11,9 @@ initializeTranslations()
 const Layout = ({ children }) => {
   return (
     <StyledProvider theme={theme}>
-      <div>
-        <Header />
-        <main>{children}</main>
-        <BackToTop />
-        <Footer />
-      </div>
+      <Header />
+      {children}
+      <BackToTop />
     </StyledProvider>
   )
 }
