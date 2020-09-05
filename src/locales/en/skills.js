@@ -2,7 +2,7 @@ export default {
   title: "Skills",
   advanced: {
     title: "Advanced",
-    subtitle: "I have been using them on a daily basis for more than 4 years.",
+    subtitle: "I have been using them on a daily basis for more than 3 years.",
   },
   proficient: {
     title: "Proficient",
@@ -15,5 +15,9 @@ export default {
   others: {
     title: "Others",
     subtitle: "Non-tech skills.",
+    fr: "<strong>French:</strong> mother tongue",
+    en: "<strong>English:</strong> fluent",
+    es: "<strong>Spanish:</strong> intermediate",
+    pm: "Project Management",
   },
 }

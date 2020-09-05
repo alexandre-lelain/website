@@ -16,11 +16,12 @@ import Section from "../Section"
 import Title from "../Title"
 
 const Container = styled.div`
+  max-width: 1280px;
   margin-top: 42px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 `
 
 const Caption = styled(Paragraph).attrs(() => ({

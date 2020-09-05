@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { useTranslation } from "react-i18next"
+import { useTranslation, Trans } from "react-i18next"
 import { graphql, useStaticQuery } from "gatsby"
 import { filter, reduce } from "lodash"
 import { Typography } from "@material-ui/core"
@@ -28,6 +28,7 @@ const query = graphql`
 `
 
 const logos = [
+  "api",
   "react",
   "js",
   "ci",
@@ -38,7 +39,6 @@ const logos = [
   "gatsby",
   "storybook",
   "tdd",
-  "git",
   "html",
   "pm",
   "babel",
@@ -51,14 +51,13 @@ const logos = [
   "es",
   "zend",
   "styledcomponents",
-  "sqlite",
   "python",
   "nginx",
   "linux",
   "java",
   "aws",
-  "django",
-  "dynamodb",
+  "sql",
+  "symfony",
 ]
 
 const getName = (originalName) => originalName.match(/([a-z,-_]+)\./)[1]
@@ -88,6 +87,7 @@ const useLogos = () => {
 
 const SkillsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 `
 
@@ -100,23 +100,24 @@ const SkillItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100px;
   min-width: 70px;
-  flex: 1 1 0px;
 `
 
 const Label = styled(Typography)``
 
 const SkillItem = ({ label, ...rest }) => (
   <SkillItemContainer>
-    <StyledImg {...rest} />
-    <Label>{label}</Label>
+    <StyledImg aria-hidden="true" {...rest} />
+    <Label>
+      <Trans>{label}</Trans>
+    </Label>
   </SkillItemContainer>
 )
 
 const Skills = () => {
   const { t } = useTranslation("skills")
   const {
+    api,
     react,
     js,
     ci,
@@ -127,7 +128,6 @@ const Skills = () => {
     cypress,
     gatsby,
     tdd,
-    git,
     html,
     pm,
     babel,
@@ -140,14 +140,13 @@ const Skills = () => {
     es,
     zend,
     styledcomponents,
-    sqlite,
     python,
     nginx,
     linux,
     java,
     aws,
-    django,
-    dynamodb,
+    symfony,
+    sql,
   } = useLogos()
   const advanced = t("advanced")
   const proficient = t("proficient")
@@ -176,6 +175,7 @@ const Skills = () => {
           />
           <SkillItem alt="Webpack" fluid={webpack} label="Webpack" />
           <SkillItem alt="jest" fluid={jest} label="Jest & RTL" />
+          <SkillItem alt="babel" fluid={babel} label="Babel" />
           <SkillItem alt="Storybook" fluid={storybook} label="Storybook" />
           <SkillItem alt="HTML&CSS" fluid={html} label="HTML & CSS" />
           <SkillItem alt="Gatsby" fluid={gatsby} label="Gatsby" />
@@ -184,13 +184,24 @@ const Skills = () => {
           <SkillItem alt="Cypress" fluid={cypress} label="Cypress" />
           <SkillItem alt="mfe" fluid={mfe} label="Micro-FrontEnds" />
           <SkillItem alt="Nodejs" fluid={nodejs} label="Node.js" />
-          <SkillItem alt="Git" fluid={git} label="Git" />
+          <SkillItem alt="Api" fluid={api} label="APIs" />
         </Skill>
         <Skill title={basics.title} subtitle={basics.subtitle}>
-          qsdqsd
+          <SkillItem alt="php" fluid={php} label="PHP" />
+          <SkillItem alt="python" fluid={python} label="Python" />
+          <SkillItem alt="java" fluid={java} label="Java" />
+          <SkillItem alt="ZF" fluid={zend} label="ZF" />
+          <SkillItem alt="Symfony" fluid={symfony} label="Symfony" />
+          <SkillItem alt="AWS" fluid={aws} label="AWS" />
+          <SkillItem alt="sql&nosql" fluid={sql} label="SQL & noSQL" />
+          <SkillItem alt="nginx" fluid={nginx} label="Nginx" />
+          <SkillItem alt="Linux" fluid={linux} label="Linux" />
         </Skill>
         <Skill title={others.title} subtitle={others.subtitle}>
-          qsdqsd
+          <SkillItem alt="fr" fluid={fr} label={t("others.fr")} />
+          <SkillItem alt="en" fluid={en} label={t("others.en")} />
+          <SkillItem alt="es" fluid={es} label={t("others.es")} />
+          <SkillItem alt="pm" fluid={pm} label={t("others.pm")} />
         </Skill>
       </SkillsContainer>
     </Section>

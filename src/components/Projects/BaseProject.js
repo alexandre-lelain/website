@@ -14,6 +14,8 @@ import Img from "gatsby-image"
 import { last, map } from "lodash"
 import { Trans, useTranslation } from "react-i18next"
 
+import Tags from "../Tags"
+
 const useStyles = makeStyles((theme) => ({
   media: {
     height: 0,
@@ -37,20 +39,29 @@ const StyledImg = styled(Img)`
 const StyledCard = styled(Card)`
   display: flex;
   flex-grow: 1;
+  min-width: 200px;
+  max-width: 500px;
   flex-direction: column;
-  max-width: 400px;
-  margin: 48px 16px;
+  margin: 48px 24px;
 
-  ${({ theme }) => `
-    @media(max-width: ${theme.breakpoints.values.sm}px) {
+  ${({ theme: { breakpoints } }) => `
+    ${breakpoints.down("sm")} {
       width: 90%;
+    }
+    ${breakpoints.down("md")} {
+      max-width: 500px;
     }
   `};
 `
 
 const Title = styled(Paragraph)`
   font-weight: bold;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+`
+
+const StyledTags = styled(Tags)`
+  margin-top: 0px;
+  text-align: left;
 `
 
 const ComplexDescription = ({ descriptions = [] }) => {
@@ -93,6 +104,7 @@ const BaseProject = ({ image = {}, prefix, ...rest }) => {
         <Title variant="h5" component="h3">
           {t("title")}
         </Title>
+        <StyledTags tags={t("tags")} />
         <ComplexDescription descriptions={descriptions} />
       </CardContent>
       <CardActions>

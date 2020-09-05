@@ -1,21 +1,9 @@
 export default {
   title: "Projects",
   caption: "Discover my projects made with passion. And with lots of coffee.",
-  cv: {
-    title: "My Web-Resume",
-    description: [
-      "My web-resume made with ❤ with React. You will find everything about my current job, my past experience, my diploma and my hobbies there.",
-      "You will also find there my CV in PDF available in both french & english.",
-    ],
-    controls: [
-      {
-        label: "Visit my web-resume",
-        link: "https://alexandre-lelain.github.io/my-website/",
-      },
-    ],
-  },
   noCodeNoBug: {
     title: "No Code, No Bug",
+    tags: ["React.js", "Gatsby", "TypeScript", "Markdown"],
     description: [
       `No Code, No Bug. A blog with tech articles that might be helpful. Or not!`,
       `Through my journey as a Software Engineer I come across concepts and fancy technologies I often do not understand. When I do, and wish it was explained in a certain way, I write a post about it.`,
@@ -34,6 +22,7 @@ export default {
   },
   componentsExtra: {
     title: "Components-extra",
+    tags: ["React.js", "TypeScript", "RTL & Jest", "Lerna", "React-Docgen"],
     description: [
       `An open-source lib made of React components.`,
       `Based on styled-components' styling system and material-ui, it aims to provide web developers with a set of customizable molecule components to build web apps fast and effectively.`,
@@ -53,6 +42,7 @@ export default {
   },
   jsExtra: {
     title: "Js-extra",
+    tags: ["TypeScript", "Jest"],
     description: [
       `Does what native Javascript doesn't.`,
       `This open-source JS lib is available on npm and provides some useful functions that are not built-in with native Javascript. This lib can be used in addition to the famous ones like Lodash or Underscore.Js.`,
@@ -71,12 +61,12 @@ export default {
   },
   reactThemeMode: {
     title: "React-theme-mode",
+    tags: ["React.js", "TypeScript", "Jest"],
     description: [
       `Managing your theme mode has never been that simple.`,
       `react-theme-mode comes with a React Hook that helps you manage your theme mode.`,
       `Since it was built on top of React's Context, you can use it anywhere inside your React application. By default, it also saves into the localStorage the new theme value each time it changes,
         so that it remains for the future visits of the users on your website.`,
-      `Fun fact: this website uses it to handle the light and dark theme 😉`,
     ],
     controls: [
       {
@@ -91,6 +81,7 @@ export default {
   },
   avecVousDemain: {
     title: "Avec Vous Demain",
+    tags: ["React.js", "Gatsby"],
     description: [
       `This is a public website promoting a new book written by one member of my family. You will find some samples and some info about the author.`,
       `I'm sorry to say that it's only available in french so far. Maybe a good opportunity for you to learn this complex and beautiful language if you want to know more about the book? ;)`,
@@ -105,6 +96,7 @@ export default {
   },
   topShape: {
     title: "Top Shape",
+    tags: ["Android"],
     description: [
       "My first Android app. It offers some tools to calculate various body mass/shape indexes, and also offers a daily follow up, thus giving to the users the posibility to check their evolution each day.",
       "It was developped more than 5 years ago, and is now outdated and quite ugly, but a revamp is planned in my backlog!",
@@ -118,6 +110,7 @@ export default {
   },
   agentWeb: {
     title: "Web Agent (alpha of IDA)",
+    tags: ["JavaScript"],
     description:
       "Web Agent is a JavaScript plugin for developers. It is a very simple AI whose purpose is to help UX on websites. Started in 2017, the project is currently on stand by.",
     controls: [

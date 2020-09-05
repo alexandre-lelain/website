@@ -4,10 +4,7 @@ import { Footer } from "components-extra"
 import { Typography } from "@material-ui/core"
 import { useTranslation } from "react-i18next"
 
-import Github from "icons/Github"
-import LinkedIn from "icons/LinkedIn"
-import Mail from "icons/Mail"
-import Twitter from "icons/Twitter"
+import { Github, LinkedIn, Mail, Twitter } from "icons"
 
 const BottomBannerText = styled(Typography).attrs(() => ({
   variant: "body2",

@@ -5,13 +5,7 @@ import PropTypes from "prop-types"
 
 const StyledPaper = styled(Paper)`
   margin: 48px 16px;
-  flex: 1 1 0px;
-  min-width: 400px;
-  ${({ theme: { breakpoints } }) => `
-    ${breakpoints.down("xs")} {
-      min-width: 250px;
-    }
-  `}
+  max-width: 900px;
 `
 
 const SkillContent = styled.div`

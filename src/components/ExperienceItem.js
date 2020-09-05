@@ -1,10 +1,15 @@
-import React, { useCallback, Fragment } from "react"
+import React, {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  Fragment,
+} from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Trans, useTranslation } from "react-i18next"
 import { Paragraph } from "components-extra"
-import { Chip, Hidden as MuiHidden, Paper, Typography } from "@material-ui/core"
-import { map } from "lodash"
+import { Hidden as MuiHidden, Paper, Typography, Zoom } from "@material-ui/core"
 import {
   TimelineConnector,
   TimelineContent,
@@ -15,6 +20,11 @@ import {
 } from "@material-ui/lab"
 
 import { Cloud, Location, School } from "icons"
+import { isSSR } from "utils"
+
+import Tags from "./Tags"
+
+const ZOOM_ANIMATION_DELAY = 500
 
 const getIcon = (type) => {
   switch (type) {
@@ -41,18 +51,6 @@ const DateLabel = styled(Paragraph)`
 const StyledDot = styled(TimelineDot)`
   padding: 12px;
   border: 3px solid white;
-`
-
-const TagsContainer = styled.ul`
-  margin-top: 8px;
-  padding: 0px;
-  text-align: center;
-  li {
-    margin-top: 8px;
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
 `
 
 const Title = styled(Typography)`
@@ -84,16 +82,6 @@ const StyledTimelineOppositeContent = styled(TimelineOppositeContent)`
 
 const Hidden = (props) => <MuiHidden implementation="css" {...props} />
 
-const Tags = ({ tags = [] }) => {
-  return (
-    <TagsContainer>
-      {map(tags, (tag) => (
-        <Chip size="small" component="li" key={tag} label={tag} />
-      ))}
-    </TagsContainer>
-  )
-}
-
 const Time = ({ t }) => (
   <Fragment>
     <DateLabel color="textSecondary">{t("date")}</DateLabel>
@@ -103,53 +91,70 @@ const Time = ({ t }) => (
 
 const ExperienceItem = ({ name }) => {
   const { t: i18nt } = useTranslation("experiences")
+  const [display, setDisplay] = useState(false)
+  const timelineItem = useRef()
   const t = useCallback((key) => i18nt(`items.${name}.${key}`), [i18nt])
   const type = t("type")
   const Icon = getIcon(type)
 
+  useEffect(() => {
+    const { current: item } = timelineItem
+    const isInViewport = () => {
+      if (item && !isSSR()) {
+        const { offsetTop, offsetHeight } = item
+        const windowPosY =
+          window.pageYOffset + window.innerHeight / 2 + offsetHeight
+        const isTimelineItemInViewport = windowPosY > offsetTop
+        if (isTimelineItemInViewport) {
+          setDisplay(true)
+        }
+      }
+    }
+    window.addEventListener("scroll", isInViewport)
+    return () => window.removeEventListener("scroll", isInViewport)
+  }, [timelineItem])
+
   return (
-    <TimelineItem>
-      <StyledTimelineOppositeContent>
-        <Hidden smDown>
-          <Time t={t} />
-        </Hidden>
-      </StyledTimelineOppositeContent>
-      <TimelineSeparator>
-        <StyledDot color={type === "web" ? "primary" : "secondary"}>
-          <Icon />
-        </StyledDot>
-        <TimelineConnector />
-      </TimelineSeparator>
-      <TimelineContent>
-        <Container elevation={3}>
-          <Title variant="h5" component="h3">
-            {t("title")}
-          </Title>
-          <Company color="primary">
-            <Location />
-            {t("company")}
-          </Company>
-          <Hidden mdUp>
+    <Zoom in={display} timeout={ZOOM_ANIMATION_DELAY}>
+      <TimelineItem ref={timelineItem}>
+        <StyledTimelineOppositeContent>
+          <Hidden smDown>
             <Time t={t} />
           </Hidden>
-          <Description>
-            <Typography>
-              <Trans>{t("description")}</Trans>
-            </Typography>
-          </Description>
-          <Tags tags={Array.isArray(t("tags")) ? t("tags") : []} />
-        </Container>
-      </TimelineContent>
-    </TimelineItem>
+        </StyledTimelineOppositeContent>
+        <TimelineSeparator>
+          <StyledDot color={type === "web" ? "primary" : "secondary"}>
+            <Icon />
+          </StyledDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Container elevation={3}>
+            <Title variant="h5" component="h3">
+              {t("title")}
+            </Title>
+            <Company color="primary">
+              <Location />
+              {t("company")}
+            </Company>
+            <Hidden mdUp>
+              <Time t={t} />
+            </Hidden>
+            <Description>
+              <Typography>
+                <Trans>{t("description")}</Trans>
+              </Typography>
+            </Description>
+            <Tags tags={t("tags")} />
+          </Container>
+        </TimelineContent>
+      </TimelineItem>
+    </Zoom>
   )
 }
 
 Time.propTypes = {
   t: PropTypes.func,
-}
-
-Tags.propTypes = {
-  tags: PropTypes.array,
 }
 
 ExperienceItem.propTypes = {
