@@ -101,7 +101,7 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
         },
         {
           name: `twitter:data2`,
-          content: "Porfolio, projects",
+          content: "Resume, Porfolio, Projects",
         },
         {
           name: `google-site-verification`,
@@ -119,10 +119,8 @@ const SEO = ({ description, keywords = [], lang, meta, title }) => {
         .concat(meta)}
     >
       <link
-        rel="stylesheet"
+        rel="stylesheet preconnect"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-        media="print"
-        onLoad="this.media='all'"
       />
     </Helmet>
   )

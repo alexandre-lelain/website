@@ -6,7 +6,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Alexandre Le Lain`,
-    description: `My personal website. You can check out all of Alexandre Le Lain's projects here!`,
+    description: `My personal resume website. You can check out all of Alexandre Le Lain's experiences and projects here!`,
     author: `@a_lelain`,
     url: "https://alexandre-lelain.dev/",
     siteUrl: "https://alexandre-lelain.dev/",
@@ -19,8 +19,7 @@ module.exports = {
       "Website",
       "Portfolio",
       "Projects",
-      "Open Source",
-      "OSS",
+      "Resume",
     ],
     image: "https://alexandre-lelain.dev/icons/favicon.png",
     google: process.env.GOOGLE || "",

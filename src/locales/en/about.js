@@ -1,7 +1,7 @@
 export default {
   left: {
     title: "About me",
-    part1: `I am a Web Engineer currently working <strong>@Attineos</strong> as a FrontEnd Engineer. I graduated at INSA Rouen, in the <strong>Systems Architecture Information department</strong>.`,
+    part1: `I am a Web Engineer currently working <strong>@Attineos</strong> as a <strong>FrontEnd Engineer</strong>. I graduated at INSA Rouen, in the Systems Architecture Information department.`,
     part2: `
       Specialized in Information Technology, and especially in <strong>Web Development</strong>, I'm a fanatic of optimization and I constantly seek to deliver products and solutions of great quality.
       I'm particularly fond of the <strong>JavaScript</strong> eco-system.
@@ -29,7 +29,7 @@ export default {
     },
     nature: {
       title: "<strong>Nature</strong>",
-      content: `This is not some kind of fancy tech topic ;) I'm also passionate about nature and activities we can do outside - I sometimes dedicate entire week-ends to go
+      content: `This is not some kind of new fancy tech topic ;) I'm also passionate about nature and activities we can do outside - I sometimes dedicate entire week-ends to go
         hiking with friends, or to go biking in the forest. I like the peacefulness it provides - I find it really helpful to clear the mind. Sometimes it even helps me figure solutions
         to a problem I have been stuck with for days! 
       `,

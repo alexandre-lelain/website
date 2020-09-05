@@ -6,7 +6,7 @@ export default {
     tags: ["React.js", "Gatsby", "TypeScript", "Markdown"],
     description: [
       `No Code, No Bug. A blog with tech articles that might be helpful. Or not!`,
-      `Through my journey as a Software Engineer I come across concepts and fancy technologies I often do not understand. When I do, and wish it was explained in a certain way, I write a post about it.`,
+      `Through my journey as a Web Engineer I come across concepts and fancy technologies I often do not understand. When I do, and wish it was explained in a certain way, I write a post about it.`,
       `It was made with components-extra, React & Gatsby.`,
     ],
     controls: [

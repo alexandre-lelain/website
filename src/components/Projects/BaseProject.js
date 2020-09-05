@@ -45,11 +45,8 @@ const StyledCard = styled(Card)`
   margin: 48px 24px;
 
   ${({ theme: { breakpoints } }) => `
-    ${breakpoints.down("sm")} {
-      width: 90%;
-    }
     ${breakpoints.down("md")} {
-      max-width: 500px;
+      max-width: 400px;
     }
   `};
 `

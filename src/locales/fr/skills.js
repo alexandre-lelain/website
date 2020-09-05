@@ -14,7 +14,7 @@ export default {
   },
   others: {
     title: "Autres",
-    subtitle: "Non-tech skills.",
+    subtitle: "Compétences diverses.",
     fr: "<strong>Français:</strong> langue maternelle",
     en: "<strong>Anglais:</strong> courant",
     es: "<strong>Espagnol:</strong> Intermédiaire",
