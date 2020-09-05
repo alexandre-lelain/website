@@ -11,11 +11,11 @@ const theme = {
       dark: "#cccccc",
     },
     backgrounds: {
-      landing: "#e6e6e6",
+      landing: "#f2f2f2",
       about: "#333",
-      experiences: "#e6e6e6",
+      experiences: "#f2f2f2",
       projects: "#333",
-      skills: "#e6e6e6",
+      skills: "#f2f2f2",
     },
   },
 }

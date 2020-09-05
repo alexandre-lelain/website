@@ -7,7 +7,7 @@ export const onRenderBody = ({ setBodyAttributes, setHtmlAttributes }) => {
       margin: "0",
       scrollBehavior: "smooth",
       scrollPaddingTop: "64px",
-      backgroundColor: "#e6e6e6",
+      backgroundColor: "#f2f2f2",
     },
   })
 }
