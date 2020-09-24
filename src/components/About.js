@@ -42,6 +42,7 @@ const PassionItem = styled.span`
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
+  margin-top: 32px;
   strong {
     margin-left: 8px;
     font-size: 1.2rem;
