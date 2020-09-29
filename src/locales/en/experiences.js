@@ -2,7 +2,7 @@ export default {
   title: "Experiences and Education",
   items: {
     attineos: {
-      title: "Web Engineer",
+      title: "Full-Stack Web Engineer",
       company: "Attineos, Rouen",
       type: "web",
       date: "2018 - now",

@@ -1,7 +1,7 @@
 export default {
   left: {
     title: "About me",
-    part1: `I am a Web Engineer currently working <strong>@Attineos</strong> as a <strong>FrontEnd Engineer</strong>. I graduated at INSA Rouen, in the Systems Architecture Information department.`,
+    part1: `I am a Web Engineer currently working <strong>@Attineos</strong> as a <strong>Full-Stack Web Engineer</strong>. I graduated at INSA Rouen, in the Systems Architecture Information department.`,
     part2: `
       Specialized in Information Technology, and especially in <strong>Web Development</strong>, I'm a fanatic of optimization and I constantly seek to deliver products and solutions of great quality.
       I'm particularly fond of the <strong>JavaScript</strong> eco-system.

@@ -2,7 +2,7 @@ export default {
   title: "Expériences et Diplômes",
   items: {
     attineos: {
-      title: "Ingénieur Web",
+      title: "Ingénieur Web Full-Stack",
       company: "Attineos, Rouen",
       type: "web",
       date: "2018 - aujourd'hui",
