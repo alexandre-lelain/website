@@ -101,7 +101,7 @@ export default {
     tags: ["Android"],
     description: [
       "Ma première application Android. Elle offre tout un tas d'outils permettant aux utilisateurs de calculer divers indices corporels. Elle permet aussi d'avoir un suivi quotidien pour que les utilisateurs visualisent leur évolution en temps réél.",
-      "L'application a été développée il y'a plus de 5 ans, et est aujourd'hui dépassée et un peu moche. Un revamp est prévu dans mon backlog cependant!",
+      "L'application a été développée il y'a plus de 7 ans, et est aujourd'hui dépassée et un peu (beaucoup) moche. Un revamp est prévu dans mon backlog cependant!",
     ],
     controls: [
       {
@@ -114,7 +114,7 @@ export default {
     title: "Agent Web (alpha d'IDA)",
     tags: ["JavaScript"],
     description:
-      "Agent Web est un plugin JavaScript à destination des développeurs. C'est une petite IA très simple dont le but est d'améliorer l'UX des websites. Débuté en 2017, le projet est pour l'instant en stand-by.",
+      "Agent Web est un plugin JavaScript à destination des développeurs. C'est une petite IA très simple dont le but est d'améliorer l'UX des websites. Débuté en 2016, le projet est pour l'instant en stand-by.",
     controls: [
       {
         label: "Essayer la démo",

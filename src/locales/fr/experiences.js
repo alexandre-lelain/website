@@ -28,7 +28,7 @@ export default {
       date: "2013-2018",
       duration: "5 ans",
       description: `
-        <strong>Cours:</strong> Développement Web, Réseaux, Base de Données, Programmation, Patternes, APIS, Maths, Management, Anglais et Espagnol.
+        <strong>Cours:</strong> Développement Web, Réseaux, Bases de Données, Programmation, Design Patterns, APIs, Maths, Management, Anglais et Espagnol.
       `,
     },
     inspiral: {

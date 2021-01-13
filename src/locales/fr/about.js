@@ -1,7 +1,7 @@
 export default {
   left: {
     title: "Mon Profil",
-    part1: `Je suis un ingénieur études et développement, et je travaille actuellement <strong>@Attineos</strong> en tant qu'ingénieur Web <strong>Full-Stack</strong>. J'ai obtenu mon diplôme
+    part1: `Je suis un ingénieur études et développement, et je travaille actuellement à <strong>Attineos</strong> en tant qu'ingénieur Web <strong>Full-Stack</strong>. J'ai obtenu mon diplôme
       d'ingénieur à l'INSA Rouen-Normandie dans le département Architecture des Systèmes d'Information.`,
     part2: `
       Je suis spécialisé dans l'ingénierie de l'information, et tout particulièrement dans le <strong>développement web</strong>. Je suis un fanatique de l'optimisation,
@@ -36,7 +36,7 @@ export default {
       title: "<strong>La Nature</strong>",
       content: `Non, ce n'est pas une nouvelle technologie sortie de nulle-part ;). Je suis aussi passionné par la nature et les activités que l'on peut faire autour.
         Cela m'arrive de passer des week-ends entiers à faire du trek accompagné d'amis, ou de longues randonnées en vélo. Je trouve en la nature une source
-        paisible d'énergie, et cela aide beaucoup à sortir le nez du guidon parfois.<br/><br/> Quelques fois, lors d'un randonnée, cela m'arrive même de trouver des solutions
+        paisible d'énergie, et cela aide beaucoup à sortir le nez du guidon parfois.<br/><br/> Quelques fois, lors d'une randonnée, cela m'arrive même de trouver des solutions
         à des problèmes sur lesquels je suis resté bloqué des jours!
       `,
     },

@@ -99,7 +99,7 @@ export default {
     tags: ["Android"],
     description: [
       "My first Android app. It offers some tools to calculate various body mass/shape indexes, and also offers a daily follow up, thus giving to the users the posibility to check their evolution each day.",
-      "It was developped more than 5 years ago, and is now outdated and quite ugly, but a revamp is planned in my backlog!",
+      "It was developped more than 7 years ago, and is now outdated and quite ugly, but a revamp is planned in my backlog!",
     ],
     controls: [
       {
@@ -112,7 +112,7 @@ export default {
     title: "Web Agent (alpha of IDA)",
     tags: ["JavaScript"],
     description:
-      "Web Agent is a JavaScript plugin for developers. It is a very simple AI whose purpose is to help UX on websites. Started in 2017, the project is currently on stand by.",
+      "Web Agent is a JavaScript plugin for developers. It is a very simple AI whose purpose is to help UX on websites. Started in 2016, the project is currently on stand by.",
     controls: [
       {
         label: "Try it now",

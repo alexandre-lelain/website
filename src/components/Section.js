@@ -11,6 +11,8 @@ const StyledContainer = styled(Container)`
   align-items: center;
   padding-bottom: 48px;
   padding-top: 48px;
+  padding-right: 24px;
+  padding-left: 24px;
   ${({
     id,
     theme: {
