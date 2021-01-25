@@ -6,7 +6,7 @@ export default {
       company: "Attineos, Rouen",
       type: "web",
       date: "2018 - aujourd'hui",
-      duration: "2,5 ans",
+      duration: "3 ans",
       tags: [
         "React.js",
         "Storybook",
