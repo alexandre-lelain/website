@@ -4,6 +4,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     title: `Alexandre Le Lain`,
     description: `My personal resume website. You can check out all of Alexandre Le Lain's experiences and projects here!`,

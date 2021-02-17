@@ -56,6 +56,7 @@ const Profile = () => {
   const { t } = useTranslation("about")
   return (
     <Part>
+      {" "}
       <Title>{t("left.title")}</Title>
       <StyledParagraph>
         <Trans>{t("left.part1")}</Trans>
