@@ -36,7 +36,7 @@ export default {
       },
       {
         label: "visit the storybook",
-        link: "https://components-extra.netlify.com",
+        link: "https://components-extra.netlify.app",
       },
     ],
   },
@@ -55,7 +55,7 @@ export default {
       },
       {
         label: "check out its API",
-        link: "https://js-extra.netlify.com",
+        link: "https://js-extra.netlify.app",
       },
     ],
   },
