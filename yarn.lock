@@ -4112,10 +4112,10 @@ component-inherit@0.0.3:
   resolved "https://registry.yarnpkg.com/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
   integrity sha1-ZF/ErfWLcrZJ1crmUTVhnbJv8UM=
 
-components-extra@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/components-extra/-/components-extra-3.1.3.tgz#4ff1be96a1c3e307ff0dd13847151b110d4ca3ab"
-  integrity sha512-zJZLD8oJsvqLWABPL8HZBV+Mnpqqdp4lXwsn/EAMwYA0fabPahxyRkBrijFDjXG+y3SpbOB6+2x5dmRbAYL7sw==
+components-extra@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/components-extra/-/components-extra-3.2.1.tgz#d46c440429346e6ad847861ac5a64b147d8e1393"
+  integrity sha512-PaTyShUB/NeuIsiYXkwISfxS/CD9C5ry0JTzWcQFDaok6RRVrvjLsEp2iSunrFb0rjtAgsi+nAFXLErawlK0Lg==
   dependencies:
     prop-types "^15.7.2"
 
