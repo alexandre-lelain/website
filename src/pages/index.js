@@ -13,10 +13,10 @@ const IndexPage = () => (
     <SEO />
     <main>
       <Landing />
-      <About />
+      {/*<About />
       <Experiences />
       <Projects />
-      <Skills />
+      <Skills />*/}
     </main>
     <Footer />
   </>

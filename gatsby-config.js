@@ -4,7 +4,6 @@ require("dotenv").config({
 })
 
 module.exports = {
-  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     title: `Alexandre Le Lain`,
     description: `My personal resume website. You can check out all of Alexandre Le Lain's experiences and projects here!`,
@@ -55,8 +54,9 @@ module.exports = {
         component: path.resolve(`./src/components/Layout.js`),
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-styled-components`,
     {
