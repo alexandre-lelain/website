@@ -1,20 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import Image from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-const query = graphql`
-  query {
-    placeholderImage: file(relativePath: { eq: "profile.webp" }) {
-      childImageSharp {
-        fluid(webpQuality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
-const StyledImage = styled(Image)`
+const StyledImage = styled(StaticImage)`
   margin-top: calc(6vh + 2vw);
   width: 156px;
   border: 3px white solid;
@@ -27,10 +15,16 @@ const StyledImage = styled(Image)`
 `
 
 const Profile = () => {
-  const { placeholderImage } = useStaticQuery(query)
-  const { fluid } = placeholderImage.childImageSharp
-
-  return <StyledImage alt="That's me!" fluid={fluid} />
+  return (
+    <StyledImage
+      alt="Alexandre Le Lain"
+      src="../images/profile.webp"
+      layout="constrained"
+      width={356}
+      height={356}
+      placeholder="blurred"
+    />
+  )
 }
 
 export default Profile

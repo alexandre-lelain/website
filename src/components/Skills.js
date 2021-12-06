@@ -5,7 +5,7 @@ import { useTranslation, Trans } from "react-i18next"
 import { graphql, useStaticQuery } from "gatsby"
 import { filter, reduce } from "lodash"
 import { Typography } from "@material-ui/core"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Section from "./Section"
 import Skill from "./Skill"
@@ -91,7 +91,7 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
 `
 
-const StyledImg = styled(Img)`
+const StyledImg = styled(StaticImage)`
   width: 42px;
 `
 
@@ -107,7 +107,14 @@ const Label = styled(Typography)``
 
 const SkillItem = ({ label, ...rest }) => (
   <SkillItemContainer>
-    <StyledImg aria-hidden="true" {...rest} />
+    <StyledImg
+      aria-hidden="true"
+      layout="constrained"
+      width={156}
+      height={156}
+      placeholder="blurred"
+      {...rest}
+    />
     <Label>
       <Trans>{label}</Trans>
     </Label>

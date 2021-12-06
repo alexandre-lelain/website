@@ -10,7 +10,7 @@ import {
   CardMedia,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { last, map } from "lodash"
 import { Trans, useTranslation } from "react-i18next"
 
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const StyledImg = styled(Img)`
+const StyledImg = styled(StaticImage)`
   ${({ theme: { palette } }) => `
     border-bottom: 1px solid ${palette.secondary.main};
   `};
@@ -83,7 +83,7 @@ const BaseProject = ({ image = {}, prefix, ...rest }) => {
   const t = useCallback((key) => i18nt(`${prefix}.${key}`), [i18nt, prefix])
   const classes = useStyles()
 
-  const { src, fluid } = image
+  const { src } = image
   const control = t("controls")
   const controls = Array.isArray(control) ? control : []
   const description = t("description")
@@ -94,8 +94,11 @@ const BaseProject = ({ image = {}, prefix, ...rest }) => {
       <CardMedia
         className={classes.media}
         component={StyledImg}
-        fluid={fluid}
         src={src}
+        placeholder="blurred"
+        layout="constrained"
+        width={500}
+        height={500}
       />
       <CardContent className={classes.content}>
         <Title variant="h5" component="h3">
