@@ -2,39 +2,23 @@ import React, { Fragment, useCallback } from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Paragraph } from "components-extra"
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-} from "@material-ui/core"
+import { Button, Card, CardActions, CardContent } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
-import { StaticImage } from "gatsby-plugin-image"
 import { last, map } from "lodash"
 import { Trans, useTranslation } from "react-i18next"
 
 import Tags from "../Tags"
 
-const useStyles = makeStyles((theme) => ({
-  media: {
-    height: 0,
-    paddingTop: "56.25%", //16:9
-  },
+const useStyles = makeStyles(({ palette }) => ({
   content: {
     textAlign: "left",
     flexGrow: 1,
+    borderTop: `1px solid ${palette.secondary.main}`,
   },
   button: {
-    color: theme.palette.links,
+    color: palette.links,
   },
 }))
-
-const StyledImg = styled(StaticImage)`
-  ${({ theme: { palette } }) => `
-    border-bottom: 1px solid ${palette.secondary.main};
-  `};
-`
 
 const StyledCard = styled(Card)`
   display: flex;
@@ -78,12 +62,11 @@ const ComplexDescription = ({ descriptions = [] }) => {
   )
 }
 
-const BaseProject = ({ image = {}, prefix, ...rest }) => {
+const BaseProject = ({ children, prefix, ...rest }) => {
   const { t: i18nt } = useTranslation("projects")
   const t = useCallback((key) => i18nt(`${prefix}.${key}`), [i18nt, prefix])
   const classes = useStyles()
 
-  const { src } = image
   const control = t("controls")
   const controls = Array.isArray(control) ? control : []
   const description = t("description")
@@ -91,15 +74,7 @@ const BaseProject = ({ image = {}, prefix, ...rest }) => {
 
   return (
     <StyledCard component="section" {...rest}>
-      <CardMedia
-        className={classes.media}
-        component={StyledImg}
-        src={src}
-        placeholder="blurred"
-        layout="constrained"
-        width={500}
-        height={500}
-      />
+      <div className={classes.media}>{children}</div>
       <CardContent className={classes.content}>
         <Title variant="h5" component="h3">
           {t("title")}
