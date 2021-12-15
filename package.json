@@ -18,7 +18,7 @@
     "build": "yarn clean && gatsby build",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "lint": "yarn eslint --cache src/**/*.js",
+    "lint": "yarn eslint src/**/*.js",
     "prepare": "husky install",
     "serve": "gatsby serve",
     "start": "gatsby develop"
