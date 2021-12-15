@@ -1,30 +1,17 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Media from "images/react_theme_mode.webp"
+import { StaticImage } from "gatsby-plugin-image"
 
 import BaseProject from "./BaseProject"
 
 export default () => {
-  const { placeholderImage } = useStaticQuery(
-    graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "react_theme_mode.webp" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-  )
-  const { fluid } = placeholderImage.childImageSharp
-
   return (
-    <BaseProject
-      id="react-theme-mode"
-      image={{ src: Media, fluid }}
-      prefix="reactThemeMode"
-    />
+    <BaseProject id="react-theme-mode" prefix="reactThemeMode">
+      <StaticImage
+        src="../../images/react_theme_mode.webp"
+        alt="react-theme-mode"
+        placeholder="blurred"
+        layout="fullWidth"
+      />
+    </BaseProject>
   )
 }

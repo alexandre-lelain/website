@@ -1,30 +1,17 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Media from "images/nocode_nobug.webp"
+import { StaticImage } from "gatsby-plugin-image"
 
 import BaseProject from "./BaseProject"
 
 export default () => {
-  const { placeholderImage } = useStaticQuery(
-    graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "nocode_nobug.webp" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-  )
-  const { fluid } = placeholderImage.childImageSharp
-
   return (
-    <BaseProject
-      id="nocode-nobug"
-      image={{ src: Media, fluid }}
-      prefix="noCodeNoBug"
-    />
+    <BaseProject id="nocode-nobug" prefix="noCodeNoBug">
+      <StaticImage
+        src="../../images/nocode_nobug.webp"
+        alt="nocode-nobug"
+        placeholder="blurred"
+        layout="fullWidth"
+      />
+    </BaseProject>
   )
 }
