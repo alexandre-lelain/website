@@ -1,8 +1,17 @@
 import React from "react"
-import Media from "images/agent_web.webp"
+import { StaticImage } from "gatsby-plugin-image"
 
 import BaseProject from "./BaseProject"
 
 export default () => {
-  return <BaseProject image={{ src: Media }} prefix="agentWeb" />
+  return (
+    <BaseProject id="agent-web" prefix="agentWeb">
+      <StaticImage
+        src="../../images/agent_web.webp"
+        alt="Agent Web"
+        placeholder="blurred"
+        layout="fullWidth"
+      />
+    </BaseProject>
+  )
 }

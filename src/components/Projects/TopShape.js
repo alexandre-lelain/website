@@ -1,8 +1,17 @@
 import React from "react"
-import Media from "images/top_shape.webp"
+import { StaticImage } from "gatsby-plugin-image"
 
 import BaseProject from "./BaseProject"
 
 export default () => {
-  return <BaseProject id="top-shape" image={{ src: Media }} prefix="topShape" />
+  return (
+    <BaseProject id="top-shape" prefix="topShape">
+      <StaticImage
+        src="../../images/top_shape.webp"
+        alt="top-shape"
+        placeholder="blurred"
+        layout="fullWidth"
+      />
+    </BaseProject>
+  )
 }

@@ -46,12 +46,12 @@ const Projects = () => {
       <Container>
         <NoCodeNoBug />
         <ComponentsExtra />
-        {/*<JsExtra />
+        <JsExtra />
         <ReactThemeMode />
         <AvecVousDemain />
         <TopShape />
         <AgentWeb />
-        <More />*/}
+        <More />
       </Container>
     </Section>
   )

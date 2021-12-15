@@ -10,7 +10,7 @@ export default () => {
         src="../../images/components_extra.webp"
         alt="components-extra"
         placeholder="blurred"
-        height={282}
+        layout="fullWidth"
       />
     </BaseProject>
   )
