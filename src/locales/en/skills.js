@@ -2,7 +2,7 @@ export default {
   title: "Skills",
   advanced: {
     title: "Advanced",
-    subtitle: "I have been using them on a daily basis for more than 3 years.",
+    subtitle: "I have been using them on a daily basis for more than 4 years.",
   },
   proficient: {
     title: "Proficient",

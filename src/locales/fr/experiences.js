@@ -1,12 +1,32 @@
 export default {
   title: "Expériences et Diplômes",
   items: {
+    hellowork: {
+      title: "Ingénieur Web Full-Stack",
+      company: "HelloWork, Bordeaux",
+      type: "web",
+      date: "2021 - aujourd'hui",
+      duration: "7 mois",
+      tags: [
+        "JavaScript",
+        "Node.js",
+        "React.js",
+        "API",
+        "MongoDB",
+        "Docker",
+        "Jenkins",
+        "Playwright",
+      ],
+      description: `
+        Développement et optimisation du produit CVCatcher.
+      `,
+    },
     attineos: {
       title: "Ingénieur Web Full-Stack",
       company: "Attineos, Rouen",
       type: "web",
-      date: "2018 - aujourd'hui",
-      duration: "3 ans",
+      date: "2018 - 2021",
+      duration: "3 ans et 4 mois",
       tags: [
         "React.js",
         "Storybook",

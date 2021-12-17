@@ -108,18 +108,6 @@ export default {
       },
     ],
   },
-  agentWeb: {
-    title: "Web Agent (alpha of IDA)",
-    tags: ["JavaScript"],
-    description:
-      "Web Agent is a JavaScript plugin for developers. It is a very simple AI whose purpose is to help UX on websites. Started in 2016, the project is currently on stand by.",
-    controls: [
-      {
-        label: "Try it now",
-        link: "https://alexandre-lelain.github.io/agentWeb/",
-      },
-    ],
-  },
   wip: {
     title: "Work in progress",
     description: "More projects coming soon...",

@@ -30,35 +30,32 @@ const query = graphql`
 
 const logos = [
   "api",
-  "react",
-  "js",
-  "ci",
-  "typescript",
-  "mfe",
-  "cypress",
-  "jest",
-  "gatsby",
-  "storybook",
-  "tdd",
-  "html",
-  "pm",
   "babel",
-  "webpack",
-  "reactnative",
-  "nodejs",
-  "php",
-  "fr",
+  "ci",
+  "cypress",
+  "docker",
   "en",
   "es",
-  "zend",
-  "styledcomponents",
-  "python",
+  "fr",
+  "gatsby",
+  "html",
+  "jenkins",
+  "jest",
+  "js",
   "nginx",
-  "linux",
-  "java",
-  "aws",
+  "nodejs",
+  "php",
+  "pm",
+  "python",
+  "react",
+  "reactnative",
   "sql",
-  "symfony",
+  "storybook",
+  "styledcomponents",
+  "tdd",
+  "typescript",
+  "webpack",
+  "zend",
 ]
 
 const useLogos = () => {
@@ -120,35 +117,32 @@ const Skills = () => {
   const { t } = useTranslation("skills")
   const {
     api,
-    react,
-    js,
-    ci,
-    typescript,
-    storybook,
-    mfe,
-    jest,
-    cypress,
-    gatsby,
-    tdd,
-    html,
-    pm,
     babel,
-    webpack,
-    reactnative,
-    nodejs,
-    php,
-    fr,
+    ci,
+    cypress,
+    docker,
     en,
     es,
-    zend,
-    styledcomponents,
-    python,
+    fr,
+    gatsby,
+    html,
+    jenkins,
+    jest,
+    js,
     nginx,
-    linux,
-    java,
-    aws,
-    symfony,
+    nodejs,
+    php,
+    pm,
+    python,
+    react,
+    reactnative,
     sql,
+    storybook,
+    styledcomponents,
+    tdd,
+    typescript,
+    webpack,
+    zend,
   } = useLogos()
   const advanced = t("advanced")
   const proficient = t("proficient")
@@ -165,11 +159,8 @@ const Skills = () => {
         </Skill>
         <Skill title={proficient.title} subtitle={proficient.subtitle}>
           <SkillItem alt="TypeScript" image={typescript} label="TypeScript" />
-          <SkillItem
-            alt="StyledComponents"
-            image={styledcomponents}
-            label="Styled-Components"
-          />
+          <SkillItem alt="Nodejs" image={nodejs} label="Node.js" />
+          <SkillItem alt="Api" image={api} label="APIs" />
           <SkillItem
             alt="ReactNative"
             image={reactnative}
@@ -178,26 +169,26 @@ const Skills = () => {
           <SkillItem alt="Webpack" image={webpack} label="Webpack" />
           <SkillItem alt="jest" image={jest} label="Jest & RTL" />
           <SkillItem alt="babel" image={babel} label="Babel" />
+          <SkillItem
+            alt="StyledComponents"
+            image={styledcomponents}
+            label="Styled-Components"
+          />
           <SkillItem alt="Storybook" image={storybook} label="Storybook" />
           <SkillItem alt="HTML&CSS" image={html} label="HTML & CSS" />
           <SkillItem alt="Gatsby" image={gatsby} label="Gatsby" />
           <SkillItem alt="TDD" image={tdd} label="TDD" />
           <SkillItem alt="CI" image={ci} label="CI" />
           <SkillItem alt="Cypress" image={cypress} label="Cypress" />
-          <SkillItem alt="mfe" image={mfe} label="Micro-FrontEnds" />
-          <SkillItem alt="Nodejs" image={nodejs} label="Node.js" />
-          <SkillItem alt="Api" image={api} label="APIs" />
         </Skill>
         <Skill title={basics.title} subtitle={basics.subtitle}>
+          <SkillItem alt="jenkins" image={jenkins} label="Jenkins" />
+          <SkillItem alt="docker" image={docker} label="Docker" />
           <SkillItem alt="php" image={php} label="PHP" />
           <SkillItem alt="python" image={python} label="Python" />
-          <SkillItem alt="java" image={java} label="Java" />
           <SkillItem alt="ZF" image={zend} label="ZF" />
-          <SkillItem alt="Symfony" image={symfony} label="Symfony" />
-          <SkillItem alt="AWS" image={aws} label="AWS" />
           <SkillItem alt="sql&nosql" image={sql} label="SQL & noSQL" />
           <SkillItem alt="nginx" image={nginx} label="Nginx" />
-          <SkillItem alt="Linux" image={linux} label="Linux" />
         </Skill>
         <Skill title={others.title} subtitle={others.subtitle}>
           <SkillItem alt="fr" image={fr} label={t("others.fr")} />

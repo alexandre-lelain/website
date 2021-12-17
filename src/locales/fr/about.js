@@ -1,7 +1,7 @@
 export default {
   left: {
     title: "Mon Profil",
-    part1: `Je suis un ingénieur études et développement, et je travaille actuellement à <strong>Attineos</strong> en tant qu'ingénieur Web <strong>Full-Stack</strong>. J'ai obtenu mon diplôme
+    part1: `Je suis un ingénieur études et développement, et je travaille actuellement à <strong>HelloWork</strong> en tant qu'ingénieur Web <strong>Full-Stack</strong>. J'ai obtenu mon diplôme
       d'ingénieur à l'INSA Rouen-Normandie dans le département Architecture des Systèmes d'Information.`,
     part2: `
       Je suis spécialisé dans l'ingénierie de l'information, et tout particulièrement dans le <strong>développement web</strong>. Je suis un fanatique de l'optimisation,

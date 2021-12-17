@@ -7,7 +7,6 @@ import ComponentsExtra from "./ComponentsExtra"
 import JsExtra from "./JsExtra"
 import AvecVousDemain from "./AvecVousDemain"
 import TopShape from "./TopShape"
-import AgentWeb from "./AgentWeb"
 import More from "./More"
 import NoCodeNoBug from "./NoCodeNoBug"
 import ReactThemeMode from "./ReactThemeMode"
@@ -50,7 +49,6 @@ const Projects = () => {
         <ReactThemeMode />
         <AvecVousDemain />
         <TopShape />
-        <AgentWeb />
         <More />
       </Container>
     </Section>

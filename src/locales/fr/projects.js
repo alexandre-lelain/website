@@ -110,18 +110,6 @@ export default {
       },
     ],
   },
-  agentWeb: {
-    title: "Agent Web (alpha d'IDA)",
-    tags: ["JavaScript"],
-    description:
-      "Agent Web est un plugin JavaScript à destination des développeurs. C'est une petite IA très simple dont le but est d'améliorer l'UX des websites. Débuté en 2016, le projet est pour l'instant en stand-by.",
-    controls: [
-      {
-        label: "Essayer la démo",
-        link: "https://alexandre-lelain.github.io/agentWeb/",
-      },
-    ],
-  },
   wip: {
     title: "Travail en cours",
     description: "De nouveaux projets bientôt...",

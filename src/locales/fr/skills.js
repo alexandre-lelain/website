@@ -2,7 +2,7 @@ export default {
   title: "Compétences",
   advanced: {
     title: "Avancé",
-    subtitle: "Je les utilise tous les jours depuis plus de 3 ans.",
+    subtitle: "Je les utilise tous les jours depuis plus de 4 ans.",
   },
   proficient: {
     title: "Expérimenté",

@@ -1,12 +1,32 @@
 export default {
   title: "Experiences and Education",
   items: {
+    hellowork: {
+      title: "Full-Stack Web Engineer",
+      company: "HelloWork, Bordeaux",
+      type: "web",
+      date: "2021 - today",
+      duration: "7 months",
+      tags: [
+        "JavaScript",
+        "Node.js",
+        "React.js",
+        "API",
+        "MongoDB",
+        "Docker",
+        "Jenkins",
+        "Playwright",
+      ],
+      description: `
+        Development and optimization of the product CVCatcher.
+      `,
+    },
     attineos: {
       title: "Full-Stack Web Engineer",
       company: "Attineos, Rouen",
       type: "web",
-      date: "2018 - now",
-      duration: "3 years",
+      date: "2018 - 2021",
+      duration: "3 years and 4 months",
       tags: [
         "React.js",
         "Storybook",
