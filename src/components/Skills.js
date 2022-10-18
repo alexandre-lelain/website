@@ -156,10 +156,10 @@ const Skills = () => {
         <Skill title={advanced.title} subtitle={advanced.subtitle}>
           <SkillItem alt="react" image={react} label="React.js" />
           <SkillItem alt="JavaScript" image={js} label="JavaScript" />
-        </Skill>
-        <Skill title={proficient.title} subtitle={proficient.subtitle}>
           <SkillItem alt="TypeScript" image={typescript} label="TypeScript" />
           <SkillItem alt="Nodejs" image={nodejs} label="Node.js" />
+        </Skill>
+        <Skill title={proficient.title} subtitle={proficient.subtitle}>
           <SkillItem alt="Api" image={api} label="APIs" />
           <SkillItem
             alt="ReactNative"
